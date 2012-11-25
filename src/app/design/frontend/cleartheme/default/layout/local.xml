@@ -1,5 +1,243 @@
 <?xml version="1.0"?>
-
+<!--
+/**
+ *
+ * ClearTheme Community Edition
+ *
+ */
+-->
 <layout version="0.1.0">
+    
+    <default>
+        <reference name="head">
+            <!-- Removes default styles, then adds css files per module -->
+<!--            <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>-->
+            <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
 
+            <action method="addCss"><stylesheet>css/page/reset.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/page.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/header.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/nav.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/footer.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/buttons.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/clears.css</stylesheet></action>
+            
+            <!-- Widgets -->
+            <!-- <action method="addCss"><stylesheet>css/widgets.css</stylesheet></action> -->
+            
+            <!-- Print -->
+            <action method="addCss"><stylesheet>css/print.css</stylesheet><params>media="print"</params></action>
+            
+            <!-- Different css files per IE version -->
+            <action method="removeItem"><type>skin_css</type><name>css/styles-ie.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/ie/ie8.css</name><params/><if>IE 8</if></action>
+            <action method="addItem"><type>skin_css</type><name>css/ie/ie9.css</name><params/><if>IE 9</if></action>
+            
+            <!-- Removes not used fixes for IE -->
+            <action method="removeItem"><type>js</type><name>lib/ds-sleight.js</name></action>
+            <action method="removeItem"><type>skin_js</type><name>js/ie6.js</name></action>
+         </reference>
+    </default>
+    
+    <print>
+        <reference name="head">
+            <!-- Removes default styles, then adds css files per module -->
+<!--            <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>-->
+            <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
+
+            <action method="addCss"><stylesheet>css/page/reset.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/page.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/header.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/nav.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/footer.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/buttons.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/clears.css</stylesheet></action>
+            
+            <!-- Widgets -->
+            <!-- <action method="addCss"><stylesheet>css/widgets.css</stylesheet></action> -->
+            
+            <!-- Print -->
+            <action method="addCss"><stylesheet>css/print.css</stylesheet><params>media="print"</params></action>
+            
+            <!-- Different css files per IE version -->
+            <action method="removeItem"><type>skin_css</type><name>css/styles-ie.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/ie/ie8.css</name><params/><if>IE 8</if></action>
+            <action method="addItem"><type>skin_css</type><name>css/ie/ie9.css</name><params/><if>IE 9</if></action>
+            
+            <!-- Removes not used fixes for IE -->
+            <action method="removeItem"><type>js</type><name>lib/ds-sleight.js</name></action>
+            <action method="removeItem"><type>skin_js</type><name>js/ie6.js</name></action>
+         </reference>
+    </print>
+    
+    <!--
+        Catalog
+    -->
+    <catalog_product_view>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/product.css</stylesheet></action>
+        </reference>
+    </catalog_product_view>
+    
+    <review_product_list>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/page/pager.css</stylesheet></action>
+        </reference>
+    </review_product_list>
+    
+    <sendfriend_product_send>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/sendfriend/sendfriend.css</stylesheet></action>
+        </reference>
+    </sendfriend_product_send>
+    
+    <catalog_category_default>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
+        </reference>
+        <reference name="product_list_toolbar">
+            <action method="setDefaultDirection"><string>asc</string></action>
+        </reference>
+    </catalog_category_default>
+    
+    <catalog_category_layered>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
+        </reference>
+        <reference name="product_list_toolbar">
+            <action method="setDefaultDirection"><string>asc</string></action>
+        </reference>
+    </catalog_category_layered>
+    
+    <catalogsearch_result_index>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
+        </reference>
+        <reference name="product_list_toolbar">
+            <action method="setDefaultDirection"><string>asc</string></action>
+        </reference>
+    </catalogsearch_result_index>
+    
+    <catalogsearch_advanced_result>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
+        </reference>
+        <reference name="product_list_toolbar">
+            <action method="setDefaultDirection"><string>asc</string></action>
+        </reference>
+    </catalogsearch_advanced_result>
+    
+    <catalogsearch_advanced_index>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/catalogsearch/advanced-form.css</stylesheet></action>
+        </reference>
+    </catalogsearch_advanced_index>
+    
+    <catalog_seo_sitemap>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/page/pager.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/sitemap.css</stylesheet></action>
+        </reference>
+    </catalog_seo_sitemap>
+    
+    <!--
+        Checkout
+    -->
+    <checkout_cart_index>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/checkout/cart.css</stylesheet></action>
+        </reference>
+    </checkout_cart_index>
+    
+    <checkout_onepage_index>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/checkout/onepage.css</stylesheet></action>
+        </reference>
+    </checkout_onepage_index>
+    
+    <checkout_onepage_success>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/checkout/success.css</stylesheet></action>
+        </reference>
+    </checkout_onepage_success>
+
+    <!-- 
+        Customer
+    -->
+    <customer_account_login>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/customer/login.css</stylesheet></action>
+        </reference>
+    </customer_account_login>
+    
+    <customer_account_create>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/customer/create.css</stylesheet></action>
+        </reference>
+    </customer_account_create>
+    
+    <customer_account_forgotpassword>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/customer/forgot-password.css</stylesheet></action>
+        </reference>
+    </customer_account_forgotpassword>
+    
+    <customer_account>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/customer/account.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/pager.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/blocks.css</stylesheet></action>
+        </reference>
+    </customer_account>
+    
+    <!--
+        Contacts
+    -->
+    <contacts_index_index>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/contacts/contacts.css</stylesheet></action>
+        </reference>
+    </contacts_index_index>
+    
+    <!-- 
+        Sales
+    -->
+    <sales_guest_form>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/sales/guest-form.css</stylesheet></action>
+        </reference>
+    </sales_guest_form>
+    
+    <sales_order_print>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/page/print.css</stylesheet></action>
+        </reference>
+    </sales_order_print>
+    
+    <sales_order_printinvoice>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/page/print.css</stylesheet></action>
+        </reference>
+    </sales_order_printinvoice>
+    
+    <sales_order_printshipment>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/page/print.css</stylesheet></action>
+        </reference>
+    </sales_order_printshipment>
+    
+    <sales_order_printcreditmemo>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/page/print.css</stylesheet></action>
+        </reference>
+    </sales_order_printcreditmemo>
 </layout>
