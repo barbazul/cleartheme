@@ -11,7 +11,7 @@
     <default>
         <reference name="head">
             <!-- Removes default styles, then adds css files per module -->
-<!--            <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>-->
+            <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>
             <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
             <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
 
@@ -20,7 +20,7 @@
             <action method="addCss"><stylesheet>css/page/header.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/nav.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/footer.css</stylesheet></action>
-            <action method="addCss"><stylesheet>css/page/buttons.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/button.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/clears.css</stylesheet></action>
             
             <!-- Widgets -->
@@ -43,7 +43,7 @@
     <print>
         <reference name="head">
             <!-- Removes default styles, then adds css files per module -->
-<!--            <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>-->
+            <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>
             <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
             <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
 
@@ -79,7 +79,7 @@
         <reference name="head">
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
-            <action method="addCss"><stylesheet>css/catalog/product.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/product-view.css</stylesheet></action>
         </reference>
     </catalog_product_view>
     
@@ -88,7 +88,7 @@
             <action method="addCss"><stylesheet>css/page/pager.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
-            <action method="addCss"><stylesheet>css/catalog/product.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/product-view.css</stylesheet></action>
         </reference>
     </review_product_list>
     
@@ -100,7 +100,7 @@
     
     <catalog_category_default>
         <reference name="head">
-            <action method="addCss"><stylesheet>css/page/blocks.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/block.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
         </reference>
@@ -111,7 +111,7 @@
     
     <catalog_category_layered>
         <reference name="head">
-            <action method="addCss"><stylesheet>css/page/blocks.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/block.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
         </reference>
@@ -122,7 +122,7 @@
     
     <catalogsearch_result_index>
         <reference name="head">
-            <action method="addCss"><stylesheet>css/page/blocks.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/block.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
         </reference>
@@ -133,7 +133,7 @@
     
     <catalogsearch_advanced_result>
         <reference name="head">
-            <action method="addCss"><stylesheet>css/page/blocks.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/block.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
         </reference>
@@ -202,7 +202,7 @@
             <action method="addCss"><stylesheet>css/customer/account.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/pager.css</stylesheet></action>
-            <action method="addCss"><stylesheet>css/page/blocks.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/block.css</stylesheet></action>
         </reference>
     </customer_account>
     
@@ -220,7 +220,7 @@
     -->
     <rss_index_index>
         <reference name="head">
-            <action method="addCss"><stylesheet>css/page/blocks.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/block.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/rss.css</stylesheet></action>
         </reference>
     </rss_index_index>
