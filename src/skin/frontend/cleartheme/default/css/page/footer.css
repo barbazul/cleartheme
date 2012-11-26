@@ -6,3 +6,10 @@
 
 /* ========================================================================== */
 /* Footer =================================================================== */
+
+.footer { border:1px solid #ddd; padding:10px; }
+.footer p { text-align:right; }
+.footer address { text-align:right; }
+.footer ul {}
+.footer ul li { display:inline; }
+.footer-container .bottom-container { text-align:center; }

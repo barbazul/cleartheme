@@ -27,7 +27,7 @@
             <!-- <action method="addCss"><stylesheet>css/widgets.css</stylesheet></action> -->
             
             <!-- Print -->
-            <action method="addCss"><stylesheet>css/print.css</stylesheet><params>media="print"</params></action>
+            <action method="addCss"><stylesheet>css/page/print.css</stylesheet><params>media="print"</params></action>
             
             <!-- Different css files per IE version -->
             <action method="removeItem"><type>skin_css</type><name>css/styles-ie.css</name></action>
@@ -59,7 +59,7 @@
             <!-- <action method="addCss"><stylesheet>css/widgets.css</stylesheet></action> -->
             
             <!-- Print -->
-            <action method="addCss"><stylesheet>css/print.css</stylesheet><params>media="print"</params></action>
+            <action method="addCss"><stylesheet>css/page/print.css</stylesheet><params>media="print"</params></action>
             
             <!-- Different css files per IE version -->
             <action method="removeItem"><type>skin_css</type><name>css/styles-ie.css</name></action>
@@ -86,6 +86,9 @@
     <review_product_list>
         <reference name="head">
             <action method="addCss"><stylesheet>css/page/pager.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/product.css</stylesheet></action>
         </reference>
     </review_product_list>
     
@@ -97,6 +100,7 @@
     
     <catalog_category_default>
         <reference name="head">
+            <action method="addCss"><stylesheet>css/page/blocks.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
         </reference>
@@ -107,6 +111,7 @@
     
     <catalog_category_layered>
         <reference name="head">
+            <action method="addCss"><stylesheet>css/page/blocks.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
         </reference>
@@ -117,6 +122,7 @@
     
     <catalogsearch_result_index>
         <reference name="head">
+            <action method="addCss"><stylesheet>css/page/blocks.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
         </reference>
@@ -127,6 +133,7 @@
     
     <catalogsearch_advanced_result>
         <reference name="head">
+            <action method="addCss"><stylesheet>css/page/blocks.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
         </reference>
@@ -147,7 +154,7 @@
             <action method="addCss"><stylesheet>css/catalog/sitemap.css</stylesheet></action>
         </reference>
     </catalog_seo_sitemap>
-    
+       
     <!--
         Checkout
     -->
@@ -207,6 +214,16 @@
             <action method="addCss"><stylesheet>css/contacts/contacts.css</stylesheet></action>
         </reference>
     </contacts_index_index>
+    
+    <!--
+        Rss
+    -->
+    <rss_index_index>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/page/blocks.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/rss.css</stylesheet></action>
+        </reference>
+    </rss_index_index>
     
     <!-- 
         Sales
