@@ -62,6 +62,12 @@ ChangeLog
     <rss_index_index>
     - Default 1 column layout.
 
+    Cleartheme_Customer Module
+    - Adds the possibility to remove custom links through xml.
+    - In fact This module was added for remove links like Billing Agreements and Recurring Profiles through local.xml
+
+    Removed Billing Agreements, Recurring Profiles and My Applications links from My Account Navigation.
+
 
 ## 25/11/2012
 
