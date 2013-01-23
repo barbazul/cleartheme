@@ -299,6 +299,12 @@
             <action method="addCss"><stylesheet>css/page/pager.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/block.css</stylesheet></action>
         </reference>
+        
+        <reference name="customer_account_navigation">
+            <action method="removeLinkByName"><name>billing_agreements</name></action>
+            <action method="removeLinkByName"><name>OAuth Customer Tokens</name></action>
+            <action method="removeLinkByName"><name>recurring_profiles</name></action>
+        </reference>
     </customer_account>
     
     <!--
