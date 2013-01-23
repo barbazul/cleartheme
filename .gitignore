@@ -1,10 +1,13 @@
 src/api.php
-src/app/code
+src/app/code/community
+src/app/code/core
 src/app/design/adminhtml
 src/app/design/frontend/base
 src/app/design/frontend/default
 src/app/design/install
-src/app/etc
+src/app/etc/*.*
+src/app/etc/modules/Mage_*
+src/app/etc/modules/Phoenix_*
 src/app/locale
 src/app/Mage.php
 src/app/.htaccess
