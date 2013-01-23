@@ -22,6 +22,11 @@
             <action method="addCss"><stylesheet>css/page/footer.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/button.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/clears.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/local.css</stylesheet></action>
+            
+            <!-- JavaScript -->
+            <action method="addItem"><type>skin_js</type><name>js/lib/jquery.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/global.js</name></action>
             
             <!-- Widgets -->
             <!-- <action method="addCss"><stylesheet>css/widgets.css</stylesheet></action> -->
@@ -37,6 +42,19 @@
             <!-- Removes not used fixes for IE -->
             <action method="removeItem"><type>js</type><name>lib/ds-sleight.js</name></action>
             <action method="removeItem"><type>skin_js</type><name>js/ie6.js</name></action>
+            
+            <!-- External resources -->
+            <!--
+            <block type="core/text" name="google-fonts">
+                <action method="setText">
+                    <text>
+                    <![CDATA[
+                        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css' />
+                    ]]>
+                    </text>
+                </action>
+            </block>
+            -->
          </reference>
     </default>
     
@@ -54,6 +72,12 @@
             <action method="addCss"><stylesheet>css/page/footer.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/buttons.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/clears.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/local.css</stylesheet></action>
+            
+            <!-- JavaScript -->
+            <action method="addItem"><type>skin_js</type><name>js/lib/jquery.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/global.js</name></action>
+            
             
             <!-- Widgets -->
             <!-- <action method="addCss"><stylesheet>css/widgets.css</stylesheet></action> -->
@@ -69,6 +93,19 @@
             <!-- Removes not used fixes for IE -->
             <action method="removeItem"><type>js</type><name>lib/ds-sleight.js</name></action>
             <action method="removeItem"><type>skin_js</type><name>js/ie6.js</name></action>
+            
+            <!-- External resources -->
+            <!--
+            <block type="core/text" name="google-fonts">
+                <action method="setText">
+                    <text>
+                    <![CDATA[
+                        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css' />
+                    ]]>
+                    </text>
+                </action>
+            </block>
+            -->
          </reference>
     </print>
     
@@ -80,6 +117,8 @@
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-view.css</stylesheet></action>
+            
+            <action method="addItem"><type>skin_js</type><name>js/product-view.js</name></action>
         </reference>
     </catalog_product_view>
     
@@ -89,8 +128,18 @@
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-view.css</stylesheet></action>
+            
+            <action method="addItem"><type>skin_js</type><name>js/product-view.js</name></action>
         </reference>
     </review_product_list>
+    
+    <review_product_view>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/page/block.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/product-view.css</stylesheet></action>
+        </reference>
+    </review_product_view>
     
     <sendfriend_product_send>
         <reference name="head">
@@ -98,11 +147,20 @@
         </reference>
     </sendfriend_product_send>
     
+    <catalog_product_compare_index>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/compare.css</stylesheet></action>
+        </reference>
+    </catalog_product_compare_index>
+    
     <catalog_category_default>
         <reference name="head">
             <action method="addCss"><stylesheet>css/page/block.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
+            
+            <action method="addItem"><type>skin_js</type><name>js/product-list.js</name></action>
         </reference>
         <reference name="product_list_toolbar">
             <action method="setDefaultDirection"><string>asc</string></action>
@@ -114,6 +172,8 @@
             <action method="addCss"><stylesheet>css/page/block.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
+            
+            <action method="addItem"><type>skin_js</type><name>js/product-list.js</name></action>
         </reference>
         <reference name="product_list_toolbar">
             <action method="setDefaultDirection"><string>asc</string></action>
@@ -125,6 +185,8 @@
             <action method="addCss"><stylesheet>css/page/block.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
+            
+            <action method="addItem"><type>skin_js</type><name>js/product-list.js</name></action>
         </reference>
         <reference name="product_list_toolbar">
             <action method="setDefaultDirection"><string>asc</string></action>
@@ -132,10 +194,15 @@
     </catalogsearch_result_index>
     
     <catalogsearch_advanced_result>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
         <reference name="head">
             <action method="addCss"><stylesheet>css/page/block.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.css</stylesheet></action>
+            
+            <action method="addItem"><type>skin_js</type><name>js/product-list.js</name></action>
         </reference>
         <reference name="product_list_toolbar">
             <action method="setDefaultDirection"><string>asc</string></action>
@@ -143,10 +210,19 @@
     </catalogsearch_advanced_result>
     
     <catalogsearch_advanced_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
         <reference name="head">
             <action method="addCss"><stylesheet>css/catalogsearch/advanced-form.css</stylesheet></action>
         </reference>
     </catalogsearch_advanced_index>
+    
+    <catalogsearch_term_popular>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/catalogsearch/term-popular.css</stylesheet></action>
+        </reference>
+    </catalogsearch_term_popular>
     
     <catalog_seo_sitemap>
         <reference name="head">
@@ -161,6 +237,7 @@
     <checkout_cart_index>
         <reference name="head">
             <action method="addCss"><stylesheet>css/checkout/cart.css</stylesheet></action>
+            <action method="addItem"><type>skin_js</type><name>js/cart.js</name></action>
         </reference>
     </checkout_cart_index>
     
@@ -171,10 +248,22 @@
     </checkout_onepage_index>
     
     <checkout_onepage_success>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
         <reference name="head">
             <action method="addCss"><stylesheet>css/checkout/success.css</stylesheet></action>
         </reference>
     </checkout_onepage_success>
+    
+    <checkout_onepage_failure>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/checkout/failure.css</stylesheet></action>
+        </reference>
+    </checkout_onepage_failure>
 
     <!-- 
         Customer
@@ -197,6 +286,12 @@
         </reference>
     </customer_account_forgotpassword>
     
+    <customer_account_resetpassword>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/customer/reset-password.css</stylesheet></action>
+        </reference>
+    </customer_account_resetpassword>
+    
     <customer_account>
         <reference name="head">
             <action method="addCss"><stylesheet>css/customer/account.css</stylesheet></action>
@@ -210,6 +305,9 @@
         Contacts
     -->
     <contacts_index_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
         <reference name="head">
             <action method="addCss"><stylesheet>css/contacts/contacts.css</stylesheet></action>
         </reference>
@@ -219,6 +317,9 @@
         Rss
     -->
     <rss_index_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
         <reference name="head">
             <action method="addCss"><stylesheet>css/page/block.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/rss.css</stylesheet></action>
