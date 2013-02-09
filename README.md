@@ -2,12 +2,13 @@ ClearTheme - Magento Community Edition Starting Theme
 ==============================
 
 * Just local.xml updates.
-* Scopes definitions in local.xml
+* Scopes definitions in local.xml.
 * Loads css files per module.
 * Loads javascript files per module.
 * jQuery loaded by default.
 * Use lesscss php compiler (lessphp leafo.net/lessphp) by soczed (http://www.magentocommerce.com/magento-connect/lesscss-5369.html).
-* Eric Meyer reset
+* Eric Meyer reset.
+* Css code formatted.
 * Based on Magento blank theme.
 * And more...
 
@@ -15,6 +16,26 @@ ClearTheme - Magento Community Edition Starting Theme
 
 ChangeLog
 ==============================
+
+## 09/02/2013
+
+    CSS improvements in following pages:
+    - Login
+    - Register
+    - Forgot Password
+    - Search Terms
+    - Contact
+    - 404 Not found
+    - Advanced Search
+    - Site Map
+    - RSS
+    - Returns
+
+    CSS improvments in page/page.less
+
+    Added <cms_index_index> handler with home.less file loaded by default.
+    Added <cms_index_noroute> handler with no-route.less file loaded by default.
+
 
 ## 08/02/2013
 
