@@ -7,8 +7,12 @@
 /* ========================================================================== */
 /* Global Less Definitions ================================================== */
 
+@linkColor: #ec1c25;
+@linkColorHover: darken(@linkColor, 20%);
+@baseLineHeight: 1.4;
+
 /* Transition */
-.transition (@duration: 100ms, @ease: ease-out, @delay: 0ms) {
+.transition (@duration: 200ms, @ease: ease-in, @delay: 0ms) {
     -webkit-transition: all @duration @ease @delay;
        -moz-transition: all @duration @ease @delay;
         -ms-transition: all @duration @ease @delay;
@@ -22,6 +26,14 @@
 }
 .sans-serif () {
     font-family: 'Times New Roman', sans-serif;
+}
+
+/* Title */
+.heading2 () {
+    clear: both;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 15px;
 }
 
 /* ========================================================================== */

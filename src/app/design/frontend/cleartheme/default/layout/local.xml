@@ -362,4 +362,19 @@
             <action method="addCss"><stylesheet>css/page/print.less</stylesheet></action>
         </reference>
     </sales_order_printcreditmemo>
+    
+    <!-- 
+        CMS
+    -->
+    <cms_index_index>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/cms/home.less</stylesheet></action>
+        </reference>
+    </cms_index_index>
+    
+    <cms_index_noroute>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/cms/no-route.less</stylesheet></action>
+        </reference>
+    </cms_index_noroute>
 </layout>

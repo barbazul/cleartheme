@@ -6,7 +6,23 @@
 
 /* ========================================================================== */
 /* Login ==================================================================== */
+   @import '../less/global.less';
+/* ========================================================================== */
 
-.account-login {}
-.account-login .new-users {}
-.account-login .registered-users {}
+.account-login {
+}
+.account-login h2 {
+    .heading2();
+}
+.account-login p {
+    line-height: @baseLineHeight;
+}
+.new-users {
+    width: 46% !important;
+}
+.registered-users {
+    width: 46% !important;
+}
+.registered-users p {
+    display: none;
+}
