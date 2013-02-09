@@ -1,16 +1,23 @@
 ClearTheme - Magento Community Edition Starting Theme
 ==============================
 
-Tired of the "blank" theme?
-
-Features description coming soon...
-
-Compatible with Magento 1.7.0.2.
+* Just local.xml updates.
+* Css files per module.
+* Javascript files per module.
+* jQuery loaded by default.
+* Use lesscss php compiler (lessphp leafo.net/lessphp) by soczed (http://www.magentocommerce.com/magento-connect/lesscss-5369.html).
+* Based on Magento blank theme.
+* And more...
 
 ------------------------------
 
 ChangeLog
 ==============================
+
+## 08/02/2013
+
+    Soczed_Less module - Lesscss php compiler (lessphp leafo.net/lessphp) - http://www.magentocommerce.com/magento-connect/lesscss-5369.html
+
 
 ## 23/01/2013
 
