@@ -11,16 +11,15 @@
     <default>
         <reference name="head">
             <!-- Removes default styles, then adds css files per module -->
-            <action method="removeItem"><type>skin_css</type><name>css/styles.less</name></action>
-            <action method="removeItem"><type>skin_css</type><name>css/widgets.less</name></action>
-            <action method="removeItem"><type>skin_css</type><name>css/print.less</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
 
             <action method="addCss"><stylesheet>css/page/reset.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/page.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/header.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/nav.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/footer.less</stylesheet></action>
-            <action method="addCss"><stylesheet>css/page/button.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/clears.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/local.less</stylesheet></action>
             
@@ -35,7 +34,7 @@
             <action method="addCss"><stylesheet>css/page/print.less</stylesheet><params>media="print"</params></action>
             
             <!-- Different css files per IE version -->
-            <action method="removeItem"><type>skin_css</type><name>css/styles-ie.less</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/styles-ie.css</name></action>
             <action method="addItem"><type>skin_css</type><name>css/ie/ie8.less</name><params/><if>IE 8</if></action>
             <action method="addItem"><type>skin_css</type><name>css/ie/ie9.less</name><params/><if>IE 9</if></action>
             
@@ -61,16 +60,15 @@
     <print>
         <reference name="head">
             <!-- Removes default styles, then adds css files per module -->
-            <action method="removeItem"><type>skin_css</type><name>css/styles.less</name></action>
-            <action method="removeItem"><type>skin_css</type><name>css/widgets.less</name></action>
-            <action method="removeItem"><type>skin_css</type><name>css/print.less</name></action>
-
+            <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
+            
             <action method="addCss"><stylesheet>css/page/reset.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/page.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/header.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/nav.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/footer.less</stylesheet></action>
-            <action method="addCss"><stylesheet>css/page/buttons.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/clears.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/local.less</stylesheet></action>
             
@@ -86,7 +84,7 @@
             <action method="addCss"><stylesheet>css/page/print.less</stylesheet><params>media="print"</params></action>
             
             <!-- Different css files per IE version -->
-            <action method="removeItem"><type>skin_css</type><name>css/styles-ie.less</name></action>
+            <action method="removeItem"><type>skin_css</type><name>css/styles-ie.css</name></action>
             <action method="addItem"><type>skin_css</type><name>css/ie/ie8.less</name><params/><if>IE 8</if></action>
             <action method="addItem"><type>skin_css</type><name>css/ie/ie9.less</name><params/><if>IE 9</if></action>
             

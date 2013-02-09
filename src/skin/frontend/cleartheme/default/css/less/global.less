@@ -1,0 +1,29 @@
+/**
+ *
+ * ClearTheme Community Edition
+ *
+ */
+
+/* ========================================================================== */
+/* Global Less Definitions ================================================== */
+
+/* Transition */
+.transition (@duration: 100ms, @ease: ease-out, @delay: 0ms) {
+    -webkit-transition: all @duration @ease @delay;
+       -moz-transition: all @duration @ease @delay;
+        -ms-transition: all @duration @ease @delay;
+         -o-transition: all @duration @ease @delay;
+            transition: all @duration @ease @delay;
+}
+
+/* Fonts */
+.serif () {
+    font-family: Arial, serif;
+}
+.sans-serif () {
+    font-family: 'Times New Roman', sans-serif;
+}
+
+/* ========================================================================== */
+   @import 'button.less';
+/* ========================================================================== */

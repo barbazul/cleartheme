@@ -1,0 +1,40 @@
+/**
+ *
+ * ClearTheme Community Edition
+ *
+ */
+
+/* ========================================================================== */
+/* Button =================================================================== */
+
+.btn-general (@background: #ec1c25) {
+    font-size: 12px; 
+    text-transform: uppercase;
+    .serif();
+
+    span {
+    }
+    span span {
+        color: #fff;
+        font-weight: 600;
+        padding: 4px 9px;
+        background: @background;
+        .transition();
+    }
+
+    &:hover span,
+    &:focus span {
+    }
+    &:hover span span,
+    &:focus span span {
+        background: darken(@background, 20%);
+    }
+
+    &:active span {
+    }
+    &:active span span {
+        background: darken(@background, 30%);
+    }
+}
+
+
