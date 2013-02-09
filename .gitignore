@@ -79,5 +79,6 @@ src/shell
 src/skin/adminhtml
 src/skin/frontend/base
 src/skin/frontend/default
+src/skin/frontend/cleartheme/default/css/*/*.css
 src/skin/install
 src/var
