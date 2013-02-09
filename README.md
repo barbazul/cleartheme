@@ -2,10 +2,12 @@ ClearTheme - Magento Community Edition Starting Theme
 ==============================
 
 * Just local.xml updates.
-* Css files per module.
-* Javascript files per module.
+* Scopes definitions in local.xml
+* Loads css files per module.
+* Loads javascript files per module.
 * jQuery loaded by default.
 * Use lesscss php compiler (lessphp leafo.net/lessphp) by soczed (http://www.magentocommerce.com/magento-connect/lesscss-5369.html).
+* Eric Meyer reset
 * Based on Magento blank theme.
 * And more...
 
@@ -17,6 +19,7 @@ ChangeLog
 ## 08/02/2013
 
     Soczed_Less module - Lesscss php compiler (lessphp leafo.net/lessphp) - http://www.magentocommerce.com/magento-connect/lesscss-5369.html
+    Changed all .css files to .less
 
 
 ## 23/01/2013
