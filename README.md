@@ -17,6 +17,11 @@ ClearTheme - Magento Community Edition Starting Theme
 ChangeLog
 ==============================
 
+## 13/02/2013
+    New Lesscss definitions.
+    Lesscss implementation in page/page.less.
+    CSS improvements in Account Dashboard, Address Book and My Tags (My Account).
+
 ## 09/02/2013
 
     CSS improvements in following pages:
