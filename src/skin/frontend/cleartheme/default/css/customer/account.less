@@ -6,32 +6,161 @@
 
 /* ========================================================================== */
 /* Customer Account ========================================================= */
+   @import '../less/global.less';
+   @boxMarginBottom: @baseSpacing;
+/* ========================================================================== */
 
-.my-account .page-title + .pager { margin-top: 0; }
-.my-account .title-buttons .link-rss { float:none; margin:0; }
+.page-title + .pager {
+    margin-top: 0;
+}
+.title-buttons .button {
+    .btn-simple();
+}
 
 /********** < Dashboard */
-.dashboard {}
-.dashboard .welcome-msg {}
+.dashboard {
+}
+.hello {
+    .heading2();
+}
+.welcome-msg {
+    line-height: @baseLineHeight;
+    margin: 0 0 @boxMarginBottom;
+}
 
-/* Block: Recent Orders */
-.dashboard .box-recent { margin:10px 0; }
+.box-recent {
+    margin: 0 0 @boxMarginBottom;
+}
+.box,
+.addresses-list .item {
+    margin: 0 0 @boxMarginBottom;
+}
+.box-head,
+.box-title {
+    position: relative;
+}
+.box-head h2,
+.box-title h3,
+.addresses-list h2 {
+    .heading2();
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    border-bottom: 1px solid @lineColor;
+}
+.box-head a,
+.box-title a {
+    .btn-simple();
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.box-content,
+.addresses-list .item {
+    line-height: @baseLineHeight;
+}
+.box-content h4,
+.addresses-list h3 {
+    .heading3();
+}
+.box-content a,
+.addresses-list p a {
+    .btn-simple();
+    display: inline-block;
+    margin: 2px 0 0;
+    line-height: 1 !important;
+}
+.box-account .col-1,
+.order-info-box .col-1,
+.addresses-primary {
+    width: 48% !important;
+}
+.box-account .col-2,
+.order-info-box .col-2,
+.addresses-additional {
+    width: 48% !important;
+}
 
-/* Block: Account Information */
-.dashboard .box-info {}
+/* Box Info */
+.box-info .box-head {
+    display: none;
+}
 
-/* Block: Reviews */
-.dashboard .box-reviews .number { float:left; font-size:10px; font-weight:bold; line-height:1; color:#fff; margin:3px -20px 0 0; padding:2px 3px; background:#ddd; }
-.dashboard .box-reviews .details { margin-left:20px; }
+/* Box Reviews */
+.box-reviews {
+    margin: 0 0 @boxMarginBottom;
+}
+.box-reviews ol {
+    list-style: disc;
+    padding: 4px 0 0 16px;
+}
+.box-reviews ol > li {
+    margin: 0 0 10px;
+}
+.box-reviews ol > li.last {
+    margin: 0;
+}
+.box-reviews .number {
+    display: none;
+}
+.box-reviews h3 {
+    .heading3();
+    margin: 0 0 5px;
+}
+.box-reviews .details {
+    margin: 0 0 10px;
+}
+.box-reviews .last .details {
+    margin: 0;
+}
+.box-reviews .last .ratings {
+    margin-bottom: 0;
+}
+.box-reviews .details ul {
+    display: inline;
+}
+.box-reviews .details li {
+    display: inline;
+}
 
-/* Block: Tags */
-.dashboard .box-tags .number { float:left; font-size:10px; font-weight:bold; line-height:1; color:#fff; margin:3px -20px 0 0; padding:2px 3px; background:#ddd; }
-.dashboard .box-tags .details { margin-left:20px; }
-/********** Dashboard > */
+/* Box Tags */
+.box-tags {
+}
+.box-tags ol {
+    list-style: disc;
+    padding: 4px 0 0 16px;
+}
+.box-tags ol > li {
+    margin: 0 0 10px;
+}
+.box-tags ol > li.last {
+    margin: 0;
+}
+.box-tags .number {
+    display: none;
+}
+.box-tags h3 {
+    .heading3();
+    margin: 0 0 5px;
+}
+.box-tags .details {
+    margin: 0 0 10px;
+}
+.box-tags .last .details {
+    margin: 0;
+}
+.box-tags .details ul {
+    display: inline;
+}
+.box-tags .details li {
+    display: inline;
+}
 
 /* Address Book */
-.addresses-list {}
-.addresses-list-additional li.item {}
+.addresses-list {
+}
+.addresses-additional .separator {
+    visibility: hidden;
+}
 
 /* Order View */
 .order-info { border:1px solid #ddd; padding:5px; }
@@ -88,3 +217,13 @@
 .product-review .ratings-table { margin:0 0 10px; }
 .product-review dt { font-weight:bold; }
 .product-review dd { font-size:13px; margin:5px 0 0; }
+
+/* My Tags */
+.tag-customer-index .my-account p {
+    line-height: @baseLineHeight;
+    margin: 0 0 round(@boxMarginBottom/3);
+}
+.tags-list {
+    font-size: round(@baseFontSize*1.3);
+    line-height: @baseLineHeight;
+}

@@ -37,3 +37,21 @@
 }
 
 
+.btn-simple (@background: #4082BC) {
+    color: #fff;
+    font-size: 12px; 
+    .serif();
+    font-weight: 600;
+    padding: 2px 4px;
+    background: @background;
+    .transition();
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        background: darken(@background, 20%);
+    }
+    &:active {
+        background: darken(@background, 30%);
+    }
+}
