@@ -327,7 +327,7 @@ button.disabled span {
 .buttons-set {
     clear: both;
     margin: @baseSpacing 0 0;
-    padding: 10px 0;
+    padding: 10px 0 0;
     border-top: 1px solid @lineColor;
 }
 .buttons-set .back-link {
@@ -460,7 +460,6 @@ p.required {
     font-weight: 400;
 }
 .page-title .separator {
-    margin: 0 3px;
 }
 .page-title .link-rss {
     float: right;
@@ -509,7 +508,6 @@ p.required {
     background-color: #f2f2f2;
 }
 .data-table .separator {
-    margin: 0 3px;
 }
 .data-table tbody {
 }
@@ -560,7 +558,10 @@ p.required {
 .cards-list dt { margin:5px 0 0; }
 .cards-list .offset { padding:2px 0 2px 20px; }
 
-.separator { margin:0 3px; }
+.separator {
+    margin: 0 3px;
+    color: lighten(@baseFontColor, 50%);
+}
 
 .divider { clear:both; display:block; font-size:0; line-height:0; height:1px; margin:10px 0; background:#ddd; text-indent:-999em; overflow:hidden; }
 
