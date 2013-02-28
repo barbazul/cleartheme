@@ -54,7 +54,15 @@
                 </action>
             </block>
             -->
-         </reference>
+        </reference>
+        
+        <reference name="left">
+            <remove name="left.permanent.callout" />
+        </reference>
+        <reference name="right">
+            <remove name="right.permanent.callout" />
+            <remove name="paypal.partner.right.logo" />
+        </reference>
     </default>
     
     <print>
@@ -113,6 +121,7 @@
     <catalog_product_view>
         <reference name="head">
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-view.less</stylesheet></action>
             
@@ -124,6 +133,7 @@
         <reference name="head">
             <action method="addCss"><stylesheet>css/page/pager.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-view.less</stylesheet></action>
             
@@ -153,6 +163,11 @@
     </catalog_product_compare_index>
     
     <catalog_category_default>
+        <!--
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        -->
         <reference name="head">
             <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
@@ -166,6 +181,11 @@
     </catalog_category_default>
     
     <catalog_category_layered>
+        <!--
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        -->
         <reference name="head">
             <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
@@ -179,6 +199,11 @@
     </catalog_category_layered>
     
     <catalogsearch_result_index>
+        <!--
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        -->
         <reference name="head">
             <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>

@@ -101,12 +101,11 @@ a {
 
 /* 3 Columns Layout */
 .col3-layout .col-main {
-    width: 484px;
-    margin-left: 10px;
+    width: 480px;
 }
 .col3-layout .col-wrapper {
     float: left;
-    width: 722px;
+    width: 720px;
 }
 .col3-layout .col-wrapper .col-main {
     float: right;
@@ -172,10 +171,12 @@ textarea {
     overflow: auto;
 }
 input.radio {
-    margin-right: 3px;
+    margin: 0 3px 0 0;
+    vertical-align: bottom;
 }
 input.checkbox {
-    margin-right: 3px;
+    margin: 0 3px 0 0;
+    vertical-align: bottom;
 }
 input.qty {
     width: 2.5em !important;
@@ -327,7 +328,7 @@ button.disabled span {
 .buttons-set {
     clear: both;
     margin: @baseSpacing 0 0;
-    padding: 10px 0 0;
+    padding: @buttonsSetPadding 0 0;
     border-top: 1px solid @lineColor;
 }
 .buttons-set .back-link {
@@ -502,6 +503,7 @@ p.required {
 }
 .data-table td {
     padding: 5px;
+    vertical-align: top;
     border: 1px solid #ddd;
 }
 .data-table thead {
@@ -545,18 +547,65 @@ p.required {
 }
 
 /* Misc */
-.link-cart { font-weight:600; color:#f00; }
-.link-wishlist { font-weight:600; }
-.link-reorder { font-weight:600; }
-.link-compare { font-weight:600; }
-.link-print { background:url('../../images/i_print.gif') 0 50% no-repeat; padding:2px 0 2px 25px; }
-.link-rss { background:url('../../images/i_rss.gif') 0 50% no-repeat; padding-left:18px; white-space:nowrap; }
-.btn-remove { display:block; width:11px; height:11px; font-size:0; line-height:0; background:url('../../images/btn_remove.gif') 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
-.btn-remove2 { display:block; width:16px; height:16px; font-size:0; line-height:0; background:url('../../images/btn_trash.gif') 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
-.btn-edit    { display:block; width:11px; height:11px; font-size:0; line-height:0; background:url('../../images/btn_edit.gif') 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
+.link-print {
+    padding: 2px 0 2px 25px;
+    background: url('../../images/i_print.gif') no-repeat 0 50%;
+}
+.link-rss {
+    white-space: nowrap; 
+    padding-left: 18px; 
+    background: url('../../images/i_rss.gif') no-repeat 0 50%;
+}
+.btn-remove {
+    display: block;
+    width: 11px;
+    height: 11px;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    background: url('../../images/btn_remove.gif') no-repeat 0 0;
+    overflow: hidden;
+}
+.btn-remove:hover,
+.btn-remove:focus {
+    opacity: 0.6;
+}
 
-.cards-list dt { margin:5px 0 0; }
-.cards-list .offset { padding:2px 0 2px 20px; }
+.btn-remove2 {
+    display: block;
+    width: 16px; height: 16px;
+    font-size: 0;
+    line-height: 0;
+    background: url('../../images/btn_trash.gif') no-repeat 0 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+.btn-remove2:hover,
+.btn-remove2:focus {
+    opacity: 0.6;
+}
+
+.btn-edit {
+    display: block;
+    width: 11px;
+    height: 11px;
+    font-size: 0;
+    line-height: 0;
+    background: url('../../images/btn_edit.gif') no-repeat 0 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+.btn-edit:hover,
+.btn-edit:focus {
+    opacity: 0.6;
+}
+
+.cards-list dt {
+    margin: 5px 0 0;
+}
+.cards-list .offset {
+    padding: 2px 0 2px 20px;
+}
 
 .separator {
     margin: 0 3px;
@@ -583,9 +632,12 @@ p.required {
 /* Product ================================================================== */
 
 /* Rating */
-.no-rating { margin:0; }
-
-.ratings { font-size:11px; line-height:1.25; margin:7px 0; }
+.no-rating {
+    margin: 0;
+}
+.ratings {
+    margin: 10px 0;
+}
 .ratings strong { float:left; margin:1px 3px 0 0; }
 .ratings .rating-links { margin:0; }
 .ratings .rating-links .separator { margin:0 2px; }
@@ -594,11 +646,19 @@ p.required {
 .rating-box { width:69px; height:13px; font-size:0; line-height:0; background:url('../../images/bkg_rating.gif') 0 0 repeat-x; text-indent:-999em; overflow:hidden; }
 .rating-box .rating { float:left; height:13px; background:url('../../images/bkg_rating.gif') 0 100% repeat-x; }
 .ratings .rating-box { float:left; margin-right:3px; }
-.ratings .amount {}
-
+.ratings .amount {
+}
 .ratings-table th,
-.ratings-table td { font-size:11px; line-height:1.15; padding:3px 0; }
-.ratings-table th { font-weight:600; padding-right:8px; }
+.ratings-table td {
+    padding: 3px 0;
+    vertical-align: middle;
+    line-height: @baseLineHeight;
+}
+.ratings-table th {
+    font-weight: 600;
+    text-align: left;
+    padding-right: 15px;
+}
 
 /* Availability */
 .availability { margin:0; }
