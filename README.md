@@ -21,6 +21,7 @@ To install ClearTheme you must have Magento 1.7+ working.
 * After that merge ClearTheme files in your Magento directory.
 * Once you merged ClearTheme files, **make sure that all directories under /path/to/magento/skin/frontend/cleartheme/css/ have write permission** (that's because lesscss compiler will generate css files in same directory of .less file).
 * Then go to **System -> Configuration -> Design (left tab)** and set **Current Package Name** to **cleartheme**.
+* Finally go to **System -> Configuration -> Less Files (left tab)** and set **Enabled** to **Yes**.
 
 **Note:** You can rename cleartheme with your own theme name (it's the idea), just rename:
 * app/design/frontend/cleartheme --> app/design/frontend/your_theme_name
@@ -47,6 +48,28 @@ Also Cleartheme_Customer module is included in the repo. This module just add a 
 
 ChangeLog
 ==============================
+
+## 28/02/2013
+    CSS cleanup on following My Account pages:
+     - Review Details
+     - Customer tag view
+     - My Wishlist
+
+    Minor page.less adjustments.
+
+    CSS cleanup on product list/grid.
+    Improved Toolbar styles.
+
+    CSS cleanup and definitions for all blocks (page/block.less).
+
+    Layout.xml:
+    - Removed left.permanent.callout on col-left
+    - Removed right.permanent.callout on col-right
+    - Removed paypal.partner.right.logo on col-right
+    - <catalog_product_view>, <review_product_list>: added css/page/block.less
+
+    Modified some icons: i_asc_arrow.gif, i_desc_arrow.gif, pager_arrow_left.gif, pager_arrow_right.gif, i_toolbar-view-mode.png.
+
 
 ## 19/02/2013
     My Account minor css adjustments.    
