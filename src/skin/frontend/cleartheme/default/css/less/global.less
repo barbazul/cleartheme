@@ -15,15 +15,8 @@
 @baseLineHeight: 1.4;
 @baseSpacing: 40px;
 @buttonsSetPadding: 10px;
-
-/* Transition */
-.transition (@duration: 200ms, @ease: ease-in, @delay: 0ms) {
-    -webkit-transition: all @duration @ease @delay;
-       -moz-transition: all @duration @ease @delay;
-        -ms-transition: all @duration @ease @delay;
-         -o-transition: all @duration @ease @delay;
-            transition: all @duration @ease @delay;
-}
+@tableHeadBkg: #eee;
+@tableLineColor: #ccc;
 
 /* Fonts */
 .serif () {
@@ -51,4 +44,5 @@
 
 /* ========================================================================== */
    @import 'button.less';
+   @import 'tool.less';
 /* ========================================================================== */

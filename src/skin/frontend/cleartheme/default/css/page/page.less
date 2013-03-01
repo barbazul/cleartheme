@@ -7,17 +7,19 @@
 /* ========================================================================== */
 /* Page ===================================================================== */
    @import '../less/global.less';
+   @spacing: @baseSpacing;
 /* ========================================================================== */
 
 /* Tools ==================================================================== */
+// Todo: remove this "tools" if possible :S
 .hidden       { display:block !important; border:0 !important; margin:0 !important; padding:0 !important; font-size:0 !important; line-height:0 !important; width:0 !important; height:0 !important; overflow:hidden !important; }
 .nobr         { white-space:nowrap !important; }
 .wrap         { white-space:normal !important; }
 .a-left       { text-align:left !important; }
 .a-center     { text-align:center !important; }
 .a-right      { text-align:right !important; }
-.v-top        { vertical-align:top; }
-.v-middle     { vertical-align:middle; }
+//.v-top        { vertical-align:top; }
+//.v-middle     { vertical-align:middle; }
 .f-none       { float:none !important; }
 .f-fix        { float:left; width:100%; }
 .no-display   { display:none; }
@@ -179,7 +181,9 @@ input.checkbox {
     vertical-align: bottom;
 }
 input.qty {
-    width: 2.5em !important;
+    width: 2em !important;
+    padding: 1px 0;
+    text-align: center;
 }
 p.control input.checkbox,
 p.control input.radio {
@@ -323,11 +327,11 @@ button.disabled span {
 .form-list .customer-dob .dob-year input.input-text { width:72px; }
 
 .fieldset + .fieldset {
-    margin: @baseSpacing 0 0;
+    margin: @spacing 0 0;
 }
 .buttons-set {
     clear: both;
-    margin: @baseSpacing 0 0;
+    margin: @spacing 0 0;
     padding: @buttonsSetPadding 0 0;
     border-top: 1px solid @lineColor;
 }
@@ -497,51 +501,31 @@ p.required {
 }
 .data-table th {
     font-weight: 600;
+    text-align: left;
     white-space: nowrap;
-    padding: 5px;
-    border: 1px solid #ddd;
+    padding: @spacing/8;
+    border: 1px solid @tableLineColor;
 }
 .data-table td {
-    padding: 5px;
+    padding:  @spacing/8;
     vertical-align: top;
-    border: 1px solid #ddd;
+    border: 1px solid @tableLineColor;
 }
 .data-table thead {
-    background-color: #f2f2f2;
-}
-.data-table .separator {
+    background: @tableHeadBkg;
 }
 .data-table tbody {
 }
 .data-table tfoot {
 }
-.data-table tr.first {
-}
-.data-table tr.last {
-}
-.data-table tr.odd {
-}
-.data-table tr.even {
-}
-.data-table tbody.odd {
-}
-.data-table tbody.odd td {
-}
-.data-table tbody.even {
-}
-.data-table tbody.even td {
-}
-.data-table tbody.odd tr.border td,
-.data-table tbody.even tr.border td {
-}
 .data-table th .tax-flag {
-    white-space: nowrap;
     font-weight: 400;
+    white-space: nowrap;
 }
 .data-table td.label,
 .data-table th.label {
     font-weight: 600;
-    background-color: #f6f6f6;
+    background: @tableHeadBkg;
 }
 .data-table td.value {
 }
@@ -572,13 +556,8 @@ p.required {
 }
 
 .btn-remove2 {
-    display: block;
-    width: 16px; height: 16px;
-    font-size: 0;
-    line-height: 0;
+    .mask(16px, 16px);
     background: url('../../images/btn_trash.gif') no-repeat 0 0;
-    text-indent: -9999px;
-    overflow: hidden;
 }
 .btn-remove2:hover,
 .btn-remove2:focus {
@@ -586,14 +565,8 @@ p.required {
 }
 
 .btn-edit {
-    display: block;
-    width: 11px;
-    height: 11px;
-    font-size: 0;
-    line-height: 0;
+    .mask(11px, 11px);
     background: url('../../images/btn_edit.gif') no-repeat 0 0;
-    text-indent: -9999px;
-    overflow: hidden;
 }
 .btn-edit:hover,
 .btn-edit:focus {
@@ -608,8 +581,9 @@ p.required {
 }
 
 .separator {
-    margin: 0 3px;
     color: lighten(@baseFontColor, 50%);
+    font-size: 90%;
+    margin: 0 3px;    
 }
 
 .divider { clear:both; display:block; font-size:0; line-height:0; height:1px; margin:10px 0; background:#ddd; text-indent:-999em; overflow:hidden; }
@@ -633,20 +607,34 @@ p.required {
 
 /* Rating */
 .no-rating {
-    margin: 0;
+    margin: @spacing/4 0;
 }
 .ratings {
-    margin: 10px 0;
+    margin: @spacing/4 0;
 }
-.ratings strong { float:left; margin:1px 3px 0 0; }
-.ratings .rating-links { margin:0; }
-.ratings .rating-links .separator { margin:0 2px; }
-.ratings dt {}
-.ratings dd {}
-.rating-box { width:69px; height:13px; font-size:0; line-height:0; background:url('../../images/bkg_rating.gif') 0 0 repeat-x; text-indent:-999em; overflow:hidden; }
-.rating-box .rating { float:left; height:13px; background:url('../../images/bkg_rating.gif') 0 100% repeat-x; }
-.ratings .rating-box { float:left; margin-right:3px; }
+.ratings strong {
+    float: left;
+    margin: 1px 3px 0 0;
+}
+.ratings .rating-links {
+    line-height: 16px;
+}
+.rating-box {
+    .mask(69px, 13px);
+    background: url('../../images/bkg_rating.gif') repeat-x 0 0;
+}
+.rating-box .rating {
+    float: left;
+    height: 13px;
+    background: url('../../images/bkg_rating.gif') repeat-x 0 100%;
+}
+.ratings .rating-box {
+    float: left;
+    margin-right: 5px;
+}
 .ratings .amount {
+    float: left;
+    line-height: 16px;
 }
 .ratings-table th,
 .ratings-table td {
@@ -661,7 +649,7 @@ p.required {
 }
 
 /* Availability */
-.availability { margin:0; }
+.availability {}
 .availability span { font-weight:600; }
 .availability.in-stock span {}
 .availability.out-of-stock span { color:#d83820; }

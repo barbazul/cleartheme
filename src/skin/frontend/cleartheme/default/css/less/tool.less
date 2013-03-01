@@ -1,0 +1,28 @@
+/**
+ *
+ * ClearTheme Community Edition
+ *
+ */
+
+/* ========================================================================== */
+/* Tool ===================================================================== */
+
+/* Transition */
+.transition (@duration: 200ms, @ease: ease-in, @delay: 0ms) {
+    -webkit-transition: all @duration @ease @delay;
+       -moz-transition: all @duration @ease @delay;
+        -ms-transition: all @duration @ease @delay;
+         -o-transition: all @duration @ease @delay;
+            transition: all @duration @ease @delay;
+}
+
+/* Mask */
+.mask (@width, @height) {
+    overflow: hidden;
+    display: block;
+    width: @width;
+    height: @height;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}

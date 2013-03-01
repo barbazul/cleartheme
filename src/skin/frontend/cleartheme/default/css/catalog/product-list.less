@@ -33,7 +33,6 @@
 
 /* Toolbar */
 .toolbar {
-    line-height: 25px;
     border-top: 1px solid @lineColor;
     border-bottom: 1px solid @lineColor;
 }
@@ -43,7 +42,7 @@
 /* Pager */
 .toolbar .pager {
     text-align: center;
-    margin: 5px 0;
+    line-height: 30px;
 }
 .toolbar .pager .amount {
     float: left;
@@ -52,13 +51,14 @@
     float: right;
 }
 .toolbar .pager .pages {
-    margin: 0 auto;
+
 }
 .toolbar .pager .pages ol {
     display: inline;
 }
 .toolbar .pager .pages li {
     display: inline;
+    margin: 0 2px;
 }
 .toolbar .pager .pages .current {
 }
@@ -69,10 +69,22 @@
     opacity: 0.6;
 }
 
+/* Sorter */
+.toolbar .sorter {
+    line-height: 30px;
+    border-top: 1px solid @lineColor;
+}
+.toolbar .sorter .sort-by {
+    float: right;
+}
+.toolbar .sorter .sort-by a:hover,
+.toolbar .sorter .sort-by a:focus {
+    opacity: 0.6;
+}
 /* View Mode */
 .view-mode {
     position: relative;
-    top: 6px;
+    top: 8px;
     float: left;
     width: 38px;
     height: 13px;
@@ -111,22 +123,7 @@
     background-position: 0 100%;
 }
 
-/* Sorter */
-.toolbar .sorter {
-    margin: 5px 0;
-    padding: 5px 0 0;
-    border-top: 1px solid @lineColor;
-}
-.toolbar .sorter .sort-by {
-    float: right;
-}
-.toolbar .sorter .sort-by a:hover,
-.toolbar .sorter .sort-by a:focus {
-    opacity: 0.6;
-}
-
 /* Generic Styles: Applies for GRID and LIST */
-
 .category-products .product-name a {
 
     &:hover,
@@ -166,10 +163,14 @@
 }
 .products-grid .btn-cart {
     .btn-general();
+    margin: 0 0 @spacing/4;
 }
 .products-grid .add-to-links {
 }
 .products-grid .add-to-links li {
+}
+.products-grid .add-to-links .separator {
+    display: none;
 }
 
 

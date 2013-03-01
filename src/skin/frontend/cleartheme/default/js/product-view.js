@@ -4,10 +4,10 @@
  *
  */
 
-//(function ($) {
-//    $(function () {
-//        
-//        
-//        
-//    });
-//}(jQuery));
+(function ($) {
+    $(function () {
+        
+        $('#mainZoom, #more-views a').CloudZoom();
+        
+    });
+}(jQuery));

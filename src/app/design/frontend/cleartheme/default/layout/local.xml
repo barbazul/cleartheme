@@ -125,6 +125,7 @@
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-view.less</stylesheet></action>
             
+            <action method="addItem"><type>skin_js</type><name>js/lib/cloud-zoom.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/product-view.js</name></action>
         </reference>
     </catalog_product_view>
@@ -137,6 +138,7 @@
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-view.less</stylesheet></action>
             
+            <action method="addItem"><type>skin_js</type><name>js/lib/cloud-zoom.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/product-view.js</name></action>
         </reference>
     </review_product_list>
@@ -253,6 +255,24 @@
             <action method="addCss"><stylesheet>css/catalog/sitemap.less</stylesheet></action>
         </reference>
     </catalog_seo_sitemap>
+    
+    <tag_product_list>
+        <!--
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        -->
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
+            
+            <action method="addItem"><type>skin_js</type><name>js/product-list.js</name></action>
+        </reference>
+        <reference name="product_list_toolbar">
+            <action method="setDefaultDirection"><string>asc</string></action>
+        </reference>
+    </tag_product_list>
        
     <!--
         Checkout
