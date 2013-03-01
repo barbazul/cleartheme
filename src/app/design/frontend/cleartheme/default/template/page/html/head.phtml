@@ -48,7 +48,7 @@
 <meta property="og:type" content="product">
 <meta property="og:url" content="<?php echo $_product->getProductUrl()?>">
 <meta property="og:image" content="<?php echo Mage::helper('catalog/image')->init($_product, 'small_image')->resize(100);?>">
-<meta property="og:site_name" content="<?php echo Mage::app()->getWebsite()->getName() ?>">
+<meta property="og:site_name" content="<?php echo Mage::getStoreConfig('general/store_information/name'); ?>">
 <meta property="og:description" content="
 <?php $short_descn =  trim(strip_tags($_product->getShortDescription())); echo ($short_descn) ? $short_descn :  trim(strip_tags($_product->getDescription())); ?>
 ">
