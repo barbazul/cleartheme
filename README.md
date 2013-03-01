@@ -49,6 +49,39 @@ Also Cleartheme_Customer module is included in the repo. This module just add a 
 ChangeLog
 ==============================
 
+## 01/03/2013
+
+    CSS cleanup and improvements on Product View page.
+    Overridden media.phtml to replaced Magento Zoom and More Views popup with CloudZoom.
+
+    Changed to HTML5 doctype. Overridden: 
+    - 1column.phtml, 
+    - 2columns-left.phtml
+    - 2columns-right.phtml
+    - 1column.phtml
+    - empty.phtml
+    - popup.phtml
+
+
+    Overridden head.phtml to do following changes:
+    - Removed <!--[if lt IE 7]> stuff.
+    - Added window.SKIN_URL javascript var (so it can be used by external js files)
+    - Added <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" /> so telephone numbers are not parsed by Skype
+    - Added Facebook Open Graph meta tags (og:title, og:type, og:url, og:image, og:site_name, og:description) on product page.
+    - Added meta viewport
+    - Added meta X-UA-Compatible
+
+
+    CSS improvements on page/page.less.
+    Added some variables in less/global.less and moved .transition() mixin to less/tool.less
+    Created less/tool.less with some lesscss mixins.
+    Local.xml, <tag_product_list>, added js and css assets.
+    Minor CSS improvements on page/pager.less.
+    Minor CSS improvements on catalog/product-list.less.
+    Minor fix on customer/account.less.
+    Updated jQuery to version 1.9.1.
+
+
 ## 28/02/2013
     CSS cleanup on following My Account pages:
      - Review Details
@@ -62,7 +95,7 @@ ChangeLog
 
     CSS cleanup and definitions for all blocks (page/block.less).
 
-    Layout.xml:
+    Local.xml:
     - Removed left.permanent.callout on col-left
     - Removed right.permanent.callout on col-right
     - Removed paypal.partner.right.logo on col-right
