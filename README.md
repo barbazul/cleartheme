@@ -14,6 +14,11 @@ ClearTheme - Magento Community Edition Starting Theme
 
 ------------------------------
 
+Demo: http://cleartheme.com.ar
+==============================
+
+------------------------------
+
 Installation & Troubleshooting
 ==============================
 
@@ -50,6 +55,14 @@ ChangeLog
 ==============================
 
 ## 01/03/2013
+    Moved forms styles from page.less to separate form.less file.
+    Removed "Remember Me Popup" styles from page.less (just used in persistent login) and replaced with a tooltip. Overriden: persistent/remember_me_tooltip.phtml.
+    Minor css adjustments and cleanup in page.less.
+    Minor css fix in login.less.
+    Defined .heading1() in global.less.
+
+
+## 01/03/2013
 
     CSS cleanup and improvements on Product View page.
     Overridden media.phtml to replaced Magento Zoom and More Views popup with CloudZoom.
@@ -62,7 +75,6 @@ ChangeLog
     - empty.phtml
     - popup.phtml
 
-
     Overridden head.phtml to do following changes:
     - Removed <!--[if lt IE 7]> stuff.
     - Added window.SKIN_URL javascript var (so it can be used by external js files)
@@ -70,7 +82,6 @@ ChangeLog
     - Added Facebook Open Graph meta tags (og:title, og:type, og:url, og:image, og:site_name, og:description) on product page.
     - Added meta viewport
     - Added meta X-UA-Compatible
-
 
     CSS improvements on page/page.less.
     Added some variables in less/global.less and moved .transition() mixin to less/tool.less
@@ -117,6 +128,7 @@ ChangeLog
     New Lesscss definitions.
     Lesscss implementation in page/page.less.
     CSS improvements in Account Dashboard, Address Book and My Tags (My Account).
+
 
 ## 09/02/2013
 
