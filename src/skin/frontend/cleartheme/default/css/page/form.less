@@ -71,10 +71,10 @@ button.button::-moz-focus-inner { /* FF Fix */
     padding: 0; 
     border: 0;
 } 
-button.button { /* <- Safari & Google Chrome Fix */
+.button { /* <- Safari & Google Chrome Fix */
     -webkit-border-fit: lines;
 }
-button.button {
+.button {
     border: 0; 
     padding: 0; 
     margin: 0; 
@@ -82,18 +82,18 @@ button.button {
     overflow: visible; 
     cursor: pointer; 
 }
-button.button span {
+.button span {
     cursor: pointer;
     display: block;
 }
-button.button span span {
+.button span span {
     white-space: nowrap;
 }
-button.disabled {
+.disabled {
     opacity: 0.5;
     cursor: default !important;
 }
-button.disabled span {
+.disabled span {
     cursor: default !important;
 }
 
@@ -128,7 +128,7 @@ button.disabled span {
 .form-list textarea { width:254px; height:10em; }
 .form-list select {
     width: 264px;
-    padding: 4px;
+    padding: 3px;
 }
 .form-list li.wide .input-box { width:535px; }
 .form-list li.wide input.input-text { width:529px; }

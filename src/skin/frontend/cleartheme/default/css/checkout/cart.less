@@ -6,36 +6,178 @@
 
 /* ========================================================================== */
 /* Cart ===================================================================== */
+   @import '../less/global.less';
+   @spacing: @baseSpacing;
+/* ========================================================================== */
 
-.cart {}
+.cart {
+}
+.page-title {
+}
+.page-title .checkout-types {
+    float: right;
+    text-align: right;
+}
+.page-title .button {
+    .btn-general();
+}
 
-/* Checkout Types */
-.cart .checkout-types { float:right; text-align:right; }
-.cart .title-buttons .checkout-types li { float:left; margin:0 0 5px 5px; }
-.cart .checkout-types .paypal-or { margin:0 8px; line-height:2.3; }
-.cart .totals .checkout-types .paypal-or { clear:both; display:block; padding:3px 55px 8px 0; line-height:1.0; font-size:11px; }
+.cart-table .product-name {
+    margin: 0 0 @spacing/8;
+}
 
-/* Shopping Cart Table */
-.cart-table .item-msg { font-size:10px; }
+.cart-table tfoot .a-right {
+    text-align: center !important;
+}
+.btn-continue {
+    float: left;
+    .btn-simple();
+}
+.btn-update {
+    float: right;
+    .btn-simple();
+}
+.btn-empty {
+    .btn-simple();
+}
 
-/* Shopping Cart Collateral boxes */
-.cart .cart-collaterals { padding:25px 0 0; }
-.cart .cart-collaterals .col2-set { float:left; width:700px; }
+.cart .cart-collaterals {
+    padding: 25px 0 0;
+}
+.cart .cart-collaterals .col2-set {
+    float: left;
+    width: 700px;
+}
 
-.cart .crosssell {}
-.cart .crosssell h2 { font-size:13px; font-weight:bold; }
-.cart .crosssell .product-image { float:left; width:75px; height:75px; border:1px solid #ddd; }
-.cart .crosssell .product-details { margin-left:90px; }
-.cart .crosssell li.item { margin:12px 0; }
+/* Cross Sells */
+.crosssell {
+}
+.crosssell h2 {
+    font-size: @baseFontSize+2;
+    font-weight: 600;
+}
+.crosssell .product-image {
+    float: left;
+    width: 75px;
+    height: 75px;
+    border: 1px solid @lineColor;
+}
+.crosssell .product-details {
+    margin-left: 90px;
+}
+.crosssell li.item {
+    margin: @spacing/2 0;
+}
+.crosssell li.last {
+    margin-bottom: 0;
+}
+.crosssell .product-name {
+    margin: 0 0 @spacing/8;
+}
+.crosssell .price-box {
+    margin: 0 0 @spacing/8;
+}
+.crosssell .btn-cart {
+    .btn-simple();
+}
+.crosssell .add-to-links {
+    margin: @spacing/8 0 0;
+}
+.crosssell .add-to-links li {
+    display: inline;
+}
 
-/* Discount Codes & Estimate Shipping and Tax Boxes */
-.cart .discount,
-.cart .shipping {}
+/* Discount Codes Box */ 
+.discount {
+    margin: 0 0 @spacing;
+}
+.discount h2 {
+    .heading2();
+}
+.discount label {
+    display: block;
+    line-height: @baseLineHeight;
+    margin: 0 0 @spacing/4;
+}
+.discount .input-box {
+    display: inline-block;
+}
+.discount .buttons-set-box {
+    display: inline-block;
+}
+.discount .button {
+    .btn-simple();
+}
+
+/* Estimate Shipping and Tax Box */
+.shipping h2 {
+    .heading2();
+}
+.shipping p {
+    line-height: @baseLineHeight;
+    margin: 0 0 @spacing/4;
+}
+.shipping .form-list li {
+    float: left;
+    width: 33%;
+    margin: 0;
+}
+.shipping .input-box {
+    width: auto!;
+    float: left;
+}
+.shipping .input-box input {
+    width: 30%;
+}
+.shipping .input-box select {
+    width: 40%;
+}
+.shipping .button {
+    .btn-simple();
+}
+#shipping-zip-form .buttons-set-box {
+    margin: @spacing/4 0 @spacing/2;
+}
+#co-shipping-method-form {
+    margin: @spacing 0 0;
+}
+#co-shipping-method-form .buttons-set-box {
+    margin: @spacing/4 0 0;
+}
+
 
 /* Shopping Cart Totals */
-.cart .totals { float:right; }
-.cart .totals table { width:100%; }
-.cart .totals table th,
-.cart .totals table td { padding:5px; }
-.cart .totals table th { font-weight:bold; }
-.cart .totals table tfoot th {}
+.totals {
+    float: right;
+    width: 220px;
+}
+.totals table {
+    width: 100%;
+}
+.totals td,
+.totals th {
+    padding: 5px 0;
+    text-align: left !important;
+}
+.totals .price {
+    display: block;
+    font-weight: 600;
+    text-align: right;
+}
+.totals tbody td {
+    font-size: @baseFontSize;
+}
+.totals tfoot td {
+    font-weight: 600;
+    font-size: @baseFontSize+5;
+}
+
+.totals .checkout-types {
+    text-align: right;
+}
+.totals .checkout-types li {
+    margin: @spacing/4 0;
+}
+.btn-proceed-checkout {
+    .btn-general();
+}

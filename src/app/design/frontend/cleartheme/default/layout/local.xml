@@ -123,6 +123,7 @@
     -->
     <catalog_product_view>
         <reference name="head">
+            <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
@@ -136,6 +137,7 @@
     <review_product_list>
         <reference name="head">
             <action method="addCss"><stylesheet>css/page/pager.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
@@ -149,6 +151,7 @@
     <review_product_view>
         <reference name="head">
             <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-view.less</stylesheet></action>
         </reference>
@@ -162,6 +165,7 @@
     
     <catalog_product_compare_index>
         <reference name="head">
+            <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/compare.less</stylesheet></action>
         </reference>
@@ -175,6 +179,7 @@
         -->
         <reference name="head">
             <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
             
@@ -193,6 +198,7 @@
         -->
         <reference name="head">
             <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
             
@@ -211,6 +217,7 @@
         -->
         <reference name="head">
             <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
             
@@ -227,6 +234,7 @@
         </reference>
         <reference name="head">
             <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
             
@@ -267,6 +275,7 @@
         -->
         <reference name="head">
             <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
             
@@ -282,6 +291,9 @@
     -->
     <checkout_cart_index>
         <reference name="head">
+            <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/checkout/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/checkout/cart.less</stylesheet></action>
             <action method="addItem"><type>skin_js</type><name>js/cart.js</name></action>
         </reference>
@@ -289,6 +301,8 @@
     
     <checkout_onepage_index>
         <reference name="head">
+            <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/checkout/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/checkout/onepage.less</stylesheet></action>
         </reference>
     </checkout_onepage_index>
@@ -341,6 +355,7 @@
     <customer_account>
         <reference name="head">
             <action method="addCss"><stylesheet>css/customer/account.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/pager.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
