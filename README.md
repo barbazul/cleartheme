@@ -54,7 +54,35 @@ Also Cleartheme_Customer module is included in the repo. This module just add a 
 ChangeLog
 ==============================
 
-## 01/03/2013
+## 05/03/2013
+
+    CSS cleanup and improvements on Cart page.
+    Minor css adjustments in page/form.less.
+    Cleaned/moved lot of css from page/page.less.
+    Created catalog/general.less to handle common catalog styles.
+    Created checkout/general.less to handle common checkout styles.
+
+    Local.xml
+    - Added css/catalog/general.less in following handlers:
+    --- <catalog_product_view>
+    --- <review_product_list>
+    --- <review_product_view>
+    --- <catalog_product_compare_index>
+    --- <catalog_category_default>
+    --- <catalog_category_layered>
+    --- <catalogsearch_result_index>
+    --- <catalogsearch_advanced_result>
+    --- <tag_product_list>
+    --- <checkout_cart_index>
+    --- <checkout_onepage_index>
+    --- <customer_account>
+
+    Added css/checkout/general.less in following handlers:
+    --- <checkout_cart_index>
+    --- <checkout_onepage_index>
+
+
+## 02/03/2013
     Moved forms styles from page.less to separate form.less file.
     Removed "Remember Me Popup" styles from page.less (just used in persistent login) and replaced with a tooltip. Overriden: persistent/remember_me_tooltip.phtml.
     Minor css adjustments and cleanup in page.less.
