@@ -54,6 +54,19 @@ Also Cleartheme_Customer module is included in the repo. This module just add a 
 ChangeLog
 ==============================
 
+## 10/03/2013
+
+    OPC css cleanup and general improvements.
+    
+    Local.xml: Added opc.js through phtml (before body end) to be able to override opcheckout.js
+    One Page Checkout cleanup and generales css improvements.
+    remember_me_tooltip.phtml usability fix (used in opc too).
+    Unified tooltips experience also in OPC.
+    Added product image and product sku to One Page Checkout Review Step.
+    Checkout Success/Failure css definitions.
+    Defined cart-empty section on Cart page.
+
+
 ## 05/03/2013
 
     CSS cleanup and improvements on Cart page.
