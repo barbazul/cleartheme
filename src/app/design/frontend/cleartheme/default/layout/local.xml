@@ -305,6 +305,10 @@
             <action method="addCss"><stylesheet>css/checkout/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/checkout/onepage.less</stylesheet></action>
         </reference>
+        
+        <reference name="before_body_end">
+            <block type="core/template" name="opc-js" template="checkout/onepage/js.phtml" />
+        </reference>
     </checkout_onepage_index>
     
     <checkout_onepage_success>

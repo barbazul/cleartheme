@@ -355,23 +355,28 @@ a {
     display: none;
     width: 200px;
     color: @baseFontColor;
+    line-height: @baseLineHeight;
     padding: @spacing/2;
     margin: -10px 0 0;
     background: #f6f6f6;
     border: 1px solid @lineColor;
 }
-.tool-tip {
-    position: absolute;
-    z-index:9999;
-    color: @baseFontColor;
-    padding: @spacing/2;
-    background: #f6f6f6;
-    border: 1px solid @lineColor;
-}
-.tool-tip .btn-close { text-align:right; }
-.tool-tip .btn-close a { display:block; margin:0 0 0 auto; width:15px; height:15px; background:url('../../images/btn_window_close.gif') 100% 0 no-repeat; text-align:left; text-indent:-999em; overflow:hidden; }
-.tool-tip .tool-tip-content { padding:5px; }
-
+/* >> 
+    // This styles can be removed but first need to validate this file:
+    // app/design/frontend/base/default/template/authorizenet/directpost/form.phtml
+    // and use the above tooltip css and js.
+    .tool-tip {
+        position: absolute;
+        z-index:9999;
+        color: @baseFontColor;
+        padding: @spacing/2;
+        background: #f6f6f6;
+        border: 1px solid @lineColor;
+    }
+    .tool-tip .btn-close { text-align:right; }
+    .tool-tip .btn-close a { display:block; margin:0 0 0 auto; width:15px; height:15px; background:url('../../images/btn_window_close.gif') 100% 0 no-repeat; text-align:left; text-indent:-999em; overflow:hidden; }
+    .tool-tip .tool-tip-content { padding:5px; }
+<< */
 
 /* Captcha */
 .captcha-note {

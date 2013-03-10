@@ -6,36 +6,164 @@
 
 /* ========================================================================== */
 /* One Page Checkout ======================================================== */
+   @import '../less/global.less';
+   @spacing: @baseSpacing;
+/* ========================================================================== */
 
-.block-progress {}
-.block-progress dt { font-weight:bold; }
-.block-progress dt.complete,
-.block-progress dd.complete { background-color:#f6f6f6; }
+.block-progress {
+}
+.block-progress .block-title {
+    font-size: @baseFontSize+2;
+    font-weight: 600;
+    margin: 0 0 @spacing/4;
+}
+.block-progress dt {
+    color: lighten(@baseFontColor, 30%);
+    font-weight: 600;
+    padding: @spacing/4;
+    border-bottom: 1px solid @lineColor;
+}
+.block-progress a {
+    float: right;
+    .mask(11px, 11px);
+    background: url('../../images/btn_edit.gif') no-repeat 0 0;
+}
+.block-progress a:hover,
+.block-progress a:focus {
+    opacity: 0.6;
+}
+.block-progress .separator {
+    display: none;
+}
+.block-progress dt.complete {
+    color: @baseFontColor;
+}
+.block-progress dd.complete {
+    line-height: @baseLineHeight;
+    padding: @spacing/4;
+    border-bottom: 1px solid @lineColor;
+}
 
-.opc { border-bottom:1px solid #ddd; position:relative; }
-.opc li.section { border:1px solid #ddd; border-bottom:0; }
 
-.opc .buttons-set.disabled button.button { display:none; }
-.opc .buttons-set .please-wait { height:21px; line-height:21px; }
+.opc {
+    position: relative;
+    border-bottom: 1px solid @lineColor;
+}
+.opc li.section {
+    border: 1px solid @lineColor;
+    border-bottom: 0;
+}
+.opc p.required {
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    position: relative;
+    top: -@spacing;
+}
+.opc .buttons-set.disabled button.button {
+    display: none;
+}
+.opc .buttons-set .please-wait {
+    // the height and line-height should be same height of Continue Button
+    height: 24px;
+    line-height: 24px;
+}
 
-.opc .step-title { background-color:#f6f6f6; padding:0 5px; text-align:right; }
-.opc .step-title .number { float:left; line-height:22px; margin-right:5px; }
-.opc .step-title h2 { float:left; }
-.opc .step-title a { display:none; float:right; }
+.opc .step-title {
+    background: #eee;
+}
+.opc .step-title .number {
+    float: left;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    background: #000;
+}
+.opc .step-title h2 {
+    float: left;
+    font-weight: 600;
+    line-height: 30px;
+    padding: 0 0 0 ((@spacing)-30);
+}
+.opc .step-title a {
+    display: none;
+}
+.opc .allow .step-title {
+    cursor: pointer;
+}
+.opc .active {
+}
+.opc .active .step-title {
+    cursor: default;
+    background-color: @lineColor;
+}
+.opc .active .step-title h2 {
+    color: #fff;
+}
+.opc .step {
+    position: relative;
+    padding: @spacing;
+    border-top: 1px solid @lineColor;
+}
 
-.opc .allow .step-title { cursor:pointer; }
-/*.opc .allow .step-title a { display:block; }*/
+/* Login Step */
+#checkout-step-login h3 {
+    .heading2();
+}
+#checkout-step-login p {
+    line-height: @baseLineHeight;
+}
+#checkout-step-login .col-1 .form-list li {
+    margin: @spacing/4 0;
+}
+#checkout-step-login .col-1 h4 {
+    .heading3();
+    margin-top: @spacing/2;
+}
+#checkout-step-login .col-1 .ul {
+    list-style: disc;
+    margin-top: @spacing/8;
+    padding-left: 16px;
+    line-height: @baseLineHeight;
+}
+#checkout-step-login .col-2 h4 {
+    .heading3();
+    display: inline;
+}
+#checkout-step-login .col-2 h4 + p {
+    display: inline;
+}
+#checkout-step-login .col-2 .form-list {
+    margin-top: @spacing/4;
+}
+#checkout-step-login .col-2 .f-left {
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    position: relative;
+    top: (round(@spacing*1.10))*(-1);
+}
 
-.opc .active {}
-.opc .active .step-title { background-color:#ccc; cursor:default; }
-/*.opc .active .step-title a { display:none; }*/
-
-.opc .step { border-top:1px solid #ddd; padding:10px; position:relative; }
-.opc .step .tool-tip { right:10px; }
-
-.opc .order-review {}
-.opc .order-review .authentication {}
-.opc .order-review .warning-message {}
+/* Review Step */
+.order-review .product-image {
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+.order-review .product-image img {
+    display: block;
+}
+.order-review .product-details {
+    margin: 0 0 0 100px;
+}
+.order-review .product-sku {
+}
+.order-review .product-name {
+    margin: @spacing/8 0;
+}
 
 /* Multiple Addresses Checkout */
 .checkout-progress { padding:0 50px; margin:10px 0; }

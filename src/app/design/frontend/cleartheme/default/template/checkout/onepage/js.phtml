@@ -24,26 +24,4 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<?php
-/**
- * "Remember Me" popup template (when click on "What's this?")
- *
- */
-/** @var $this Mage_Core_Block_Template */
-?>
-<div id="remember-me-tooltip" class="tooltip tooltip-rememberme">
-    <p><?php echo $this->__('Checking &quot;Remember Me&quot; will let you access your shopping cart on this computer when you are logged out') ?></p>
-</div>
-<script type="text/javascript">
-//<![CDATA[
-    (function ($) {
-        $(function () {
-            $('#remember-me-box a').on('click', function (e) {
-                e.preventDefault(); // This is because the <a> has href="#". Breaks usability.
-            }).tooltip({
-                tip: '#remember-me-tooltip'
-            });
-        });
-    }(jQuery));
-//]]>
-</script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/opc.js') ?>"></script>
