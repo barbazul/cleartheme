@@ -26,6 +26,9 @@
             
             <!-- JavaScript -->
             <action method="addItem"><type>skin_js</type><name>js/lib/jquery.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/lib/frontend.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/lib/jquery-tools/toolbox.expose.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/lib/jquery-tools/overlay.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/lib/jquery-tools/tooltip.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/global.js</name></action>
             
@@ -61,9 +64,14 @@
         <reference name="left">
             <remove name="left.permanent.callout" />
         </reference>
+        
         <reference name="right">
             <remove name="right.permanent.callout" />
             <remove name="paypal.partner.right.logo" />
+        </reference>
+        
+        <reference name="before_body_end">
+            <block type="customer/form_login" name="customer_form_mini_login" template="customer/form/mini.login.phtml" />
         </reference>
     </default>
     
@@ -85,6 +93,9 @@
             
             <!-- JavaScript -->
             <action method="addItem"><type>skin_js</type><name>js/lib/jquery.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/lib/frontend.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/lib/jquery-tools/toolbox.expose.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/lib/jquery-tools/overlay.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/lib/jquery-tools/tooltip.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/global.js</name></action>
             

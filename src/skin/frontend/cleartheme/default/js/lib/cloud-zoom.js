@@ -5,6 +5,7 @@
 // MIT License
 //
 // Please retain this copyright header in all versions of the software
+// Modified by Cleartheme
 //////////////////////////////////////////////////////////////////////////////////
 (function ($) {
 
@@ -12,8 +13,6 @@
     // Get the path of executing script.
     var scripts = document.getElementsByTagName("script");
     var last = scripts[scripts.length-1].src.lastIndexOf('/');
-    //var scriptPath = scripts[scripts.length-1].src.slice(0,last);
-    var scriptPath = window.SKIN_URL+'images';
         
    // $(document).ready(function () {
    //     $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
@@ -178,7 +177,7 @@
 		We need the dummy background image as IE does not trap mouse events on
 		transparent parts of a div.
 		*/
-            var $m = $("<div class='mousetrap' style='background-image:url(\"" + scriptPath + "/blank.png\")" + "\'></div>");
+            var $m = $("<div class='mousetrap' style='background-image:url(\"" + window.Frontend.getSkinUrl()+'images' + "/blank.png\")" + "\'></div>");
 
             $mouseTrap = jWin.parent().append($m).find(':last');
             $mouseTrap = $('.mousetrap',jWin.parent());

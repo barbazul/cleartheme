@@ -8,7 +8,7 @@
  *
  * Since: November 2008
  * Date: @DATE 
- * Modified by emateu.
+ * Modified by Cleartheme
  */
 (function($) { 	
     // static constructs

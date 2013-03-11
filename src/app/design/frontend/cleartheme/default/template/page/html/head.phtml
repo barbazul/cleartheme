@@ -33,11 +33,6 @@
 <meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>">
 <link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon">
 <link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon">
-<script>
-//<![CDATA[
-    window.SKIN_URL = '<?php echo $this->getSkinUrl() ?>';
-//]]> 
-</script>
 <?php echo $this->getCssJsHtml() ?>
 <?php echo $this->getChildHtml() ?>
 <?php echo $this->helper('core/js')->getTranslatorScript() ?>
@@ -54,3 +49,9 @@
 ">
 <?php endif ?>
 <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+<script>
+//<![CDATA[
+    window.Frontend.skin_url = '<?php echo $this->getSkinUrl() ?>';
+    window.Frontend.logged_in = <?php echo ($this->helper('customer')->isLoggedIn()) ? 'true' : 'false'  ?>;
+//]]> 
+</script>
