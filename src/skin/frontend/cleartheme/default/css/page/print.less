@@ -6,19 +6,44 @@
 
 /* ========================================================================== */
 /* Print Page =============================================================== */
+   @import '../less/global.less';
+   @spacing: (@baseSpacing/2);
+/* ========================================================================== */
 
-*     { background:none !important; text-align:left !important; }
-body  { background:#fff !important; font-size:9pt !important; margin:15px !important; }
-a     { color:#2976c9 !important; }
-th,td { color:#2f2f2f !important;  border-color:#ccc !important; }
-
-.header-container,
-.nav-container,
-.footer-container,
-.pager,
-.toolbar,
-.actions,
-.buttons-set { display:none !important; }
-
-.page-print .data-table .cart-tax-total { background-position:100% -54px; }
-.page-print .data-table .cart-tax-info { display:block !important; }
+.page-print .print-head {
+    margin: 0 0 @spacing;
+}
+.page-print h1 {
+    .heading1();
+}
+.page-print .order-date {
+    text-align: right;
+    margin-top: -@baseFontSize;
+}
+.page-print h2:not(.h2),
+.page-print .col2-set h3,
+.page-print .col2-set + h3 {
+    .heading2();
+}
+.page-print h2.h2 {
+    .heading1();
+}
+.page-print .col2-set {
+    margin: @spacing 0;
+}
+.page-print p,
+.page-print address {
+    line-height: @baseLineHeight;
+}
+.page-print .buttons-set {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    background: 0;
+    border: 0;
+}
+.page-print .buttons-set .button {
+    .btn-general();
+}

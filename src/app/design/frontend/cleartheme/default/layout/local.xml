@@ -76,6 +76,7 @@
             
             <action method="addCss"><stylesheet>css/page/reset.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/page.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/form.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/header.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/nav.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/footer.less</stylesheet></action>
