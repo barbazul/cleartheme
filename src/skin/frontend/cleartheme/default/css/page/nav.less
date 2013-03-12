@@ -6,44 +6,106 @@
 
 /* ========================================================================== */
 /* Nav ====================================================================== */
+   @import '../less/global.less';
+   @spacing: @baseSpacing;
+/* ========================================================================== */
 
-.nav-container {}
-#nav { border:1px solid #ddd; padding:5px 0; margin:10px 0; font-size:13px; }
+.nav-container {
+    line-height: @baseLineHeight;
+    margin: @spacing/8 0;
+    padding: @spacing/4;
+    background: #fff;
+}
+#nav {
+}
 
 /* All Levels */
-#nav li { text-align:left; position:relative; }
-#nav li.over { z-index:998; }
-#nav li.parent {}
-#nav li a { display:block; text-decoration:none; }
-#nav li a:hover { text-decoration:none; }
-#nav li a span { display:block; white-space:nowrap; cursor:pointer; }
-#nav li ul a span { white-space:normal; }
+#nav li {
+    position: relative;
+}
+#nav li.over {
+    z-index: 998;
+}
+#nav li.parent {
+}
+#nav li a {
+    display: block;
+    &:hover{
+
+    }
+    span {
+        display: block;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+}
+#nav li ul a span {
+    white-space: normal;
+}
 
 /* 1st Level */
-#nav li { float:left; }
-#nav li a { float:left; padding:5px 10px; font-weight:bold; color:#888; }
-#nav li a:hover { color:#000; }
-#nav li.over a,
-#nav li.active a { color:#000; }
+#nav > li {
+    float: left;
+}
+#nav li a {
+    float: left;
+    line-height: 25px;
+    padding: 0 @spacing/4;
+    font-weight: 600;
+    color: @linkColor;
+}
+#nav li.over a {
+    color: #fff !important;
+    background: #000;
+}
+#nav li.active a {
+    color: #333;
+}
 
 /* 2nd Level */
-#nav ul,
-#nav div { position:absolute; width:15em; top:25px; left:-10000px; border:1px solid #ddd; background:#fafafa; }
-#nav div ul { position:static; width:auto; border:none; }
+#nav ul {
+    position: absolute;
+    width: 180px;
+    top: 25px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    background: #000;
+}
 
 /* 3rd+ leven */
-#nav ul ul,
-#nav ul div { top:7px; }
-
-#nav ul li { float:none; border-bottom:1px solid #ddd; }
-#nav ul li.last { border-bottom:0; }
-#nav ul li a { float:none; padding:3px 9px; font-weight:normal; color:#888 !important; }
-#nav ul li a:hover { color:#000 !important; }
-#nav ul li.active > a,
-#nav ul li.over > a { color:#000 !important; }
+#nav ul ul {
+    top: 7px;
+    left: 120px;
+}
+#nav ul li {
+    float: none;
+    border-top: 1px solid #fff;
+}
+#nav ul li.last {
+}
+#nav ul li a {
+    float: none;
+    font-weight: 400;
+    line-height: @baseLineHeight;
+    padding: @spacing/8 @spacing/4;
+    color: #fff !important;
+}
+#nav ul li.over > a {
+    color: #fff !important;
+    background: @linkColorHover;
+}
+#nav ul li.active > a {
+    color: #fff !important;
+}
 
 /* Show menu */
-#nav li ul.shown-sub,
-#nav li div.shown-sub { left:0; z-index:999; }
-#nav li .shown-sub ul.shown-sub,
-#nav li .shown-sub li div.shown-sub { left:100px; }
+#nav li ul.shown-sub {
+    opacity: 1;
+    visibility: visible;
+    z-index: 9999;
+    .transition(150ms);
+}
+#nav li .shown-sub ul.shown-sub {
+    left: 140px;
+}

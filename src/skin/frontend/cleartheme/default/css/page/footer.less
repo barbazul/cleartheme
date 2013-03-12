@@ -6,10 +6,30 @@
 
 /* ========================================================================== */
 /* Footer =================================================================== */
+   @import '../less/global.less';
+   @spacing: @baseSpacing;
+/* ========================================================================== */
 
-.footer { border:1px solid #ddd; padding:10px; }
-.footer p { text-align:right; }
-.footer address { text-align:right; }
-.footer ul {}
-.footer ul li { display:inline; }
-.footer-container .bottom-container { text-align:center; }
+.footer-container {
+    margin: @spacing/2 0 0;
+    padding: @spacing/2;
+    background: #fff;
+}
+.footer {
+    line-height: @baseLineHeight;
+}
+.footer a {
+    color: @linkColorHover;
+    &:hover,
+    &focus {
+        color: @linkColor;
+    }
+}
+.footer p {
+}
+.footer ul {
+}
+.footer ul li {
+    display: inline;
+    margin-right: 5px;
+}

@@ -6,22 +6,106 @@
 
 /* ========================================================================== */
 /* Header =================================================================== */
+   @import '../less/global.less';
+   @spacing: @baseSpacing;
+/* ========================================================================== */
 
-.logo { float:left; }
-.header-container {}
-.header { padding:10px; border:1px solid #ddd; }
-.header .logo { float:left; text-decoration:none !important; }
-.header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
-.header h1.logo { margin:0; padding:0; }
-.header .welcome-msg { font-weight:bold; text-align:right; }
-.header .welcome-msg a {}
-.header .links { float:right; }
-.header .links li { display:inline; }
-.header .form-search { text-align:right; }
-.header .form-search .search-autocomplete { z-index:999; }
-.header .form-search .search-autocomplete ul { border:1px solid #ddd; background-color:#fff; }
-.header .form-search .search-autocomplete li { padding:3px; border-bottom:1px solid #ddd; cursor:pointer; }
-.header .form-search .search-autocomplete li .amount { float:right; font-weight:bold; }
-.header .form-search .search-autocomplete li.selected {}
-.header .form-language { clear:both; text-align:right; }
-.header-container .top-container { clear:both; text-align:right; }
+.header-container {
+    padding: @spacing/2;
+    background: #fff;
+}
+.header {
+    position: relative;
+}
+.header a {
+    color: @linkColor;
+    &:hover,
+    &focus {
+        color: @linkColorHover;
+    }
+}
+
+.logo {
+    float: left;
+}
+.logo strong {
+    position: absolute;
+    top: -9999px;
+    left: -999em;
+    width: 0; 
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.welcome-msg {
+    font-weight: 600;
+    text-align: right;
+}
+
+.header .links {
+    text-align: right;
+    margin: @spacing/4 0;
+}
+.header .links li {
+    display: inline;
+    margin: 0 0 0 10px;
+}
+
+.form-language {
+    text-align: right;
+}
+
+#search_mini_form {
+    position: absolute;
+    top: 15px;
+    left: 310px;
+}
+.form-search {
+    position: relative;
+    width: 260px;
+}
+.form-search label {
+    display: none;
+}
+.form-search .input-text {
+    width: 250px;
+    height: 17px;
+}
+.form-search .button {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 1;
+    .transition();
+    .mask(25px, 25px);
+    background: url('../../images/i_search.png') no-repeat 50% 50%;
+}
+.form-search .button:hover,
+.form-search .button:focus {
+    opacity: 0.5;
+}
+
+.form-search .search-autocomplete {
+    z-index: 999;
+    margin: -1px 0 0;
+}
+.form-search .search-autocomplete ul {
+    background: #fff;
+    border: 1px solid #ec1c25;
+    border-top: 0;
+}
+.form-search .search-autocomplete li {
+    cursor: pointer;
+    padding: @spacing/4 @spacing/8;
+    border-top: 1px solid #eee;
+}
+.form-search .search-autocomplete li .amount {
+    float: right;
+    font-weight: 600;
+}
+.form-search .search-autocomplete li.selected {
+    color: @linkColorHover;
+}
