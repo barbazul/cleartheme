@@ -187,7 +187,7 @@
                 top:0,
                 left:0,
                 position:'absolute',
-                zIndex:9999
+                zIndex:100
             });
             //////////////////////////////////////////////////////////////////////			
             /* Do as little as possible in mousemove event to prevent slowdown. */
@@ -371,7 +371,7 @@
                 // Wrap an outer div around the link so we can attach things without them becoming part of the link.
                 // But not if wrap already exists.
                 if ($(this).parent().attr('id') != 'wrap') {
-                    $(this).wrap('<div id="wrap" style="top:0px;z-index:9999;position:relative;"></div>');
+                    $(this).wrap('<div id="wrap" style="top:0px;z-index:100;position:relative;"></div>');
                 }
                 opts = $.extend({}, $.fn.CloudZoom.defaults, options);
                 opts = $.extend({}, opts, relOpts);

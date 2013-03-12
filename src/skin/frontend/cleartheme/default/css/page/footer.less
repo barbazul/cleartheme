@@ -11,11 +11,13 @@
 /* ========================================================================== */
 
 .footer-container {
-    margin: @spacing/2 0 0;
-    padding: @spacing/2;
+    margin: @spacing/8 0 0;
     background: #fff;
 }
 .footer {
+    width: @pageWidth;
+    margin: 0 auto;
+    padding: @spacing/2 0;
     line-height: @baseLineHeight;
 }
 .footer a {
@@ -26,10 +28,45 @@
     }
 }
 .footer p {
+    margin: @spacing/8 0;
 }
 .footer ul {
 }
 .footer ul li {
     display: inline;
     margin-right: 5px;
+}
+
+.newsletter-block {
+    float: right;
+}
+.newsletter-block div {
+    position: relative;
+    width: 260px;
+    height: 27px;
+
+}
+.newsletter-block label {
+    display: block;
+}
+.newsletter-block .input-text {
+    width: 250px;
+    height: 17px;
+}
+.newsletter-block .button {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 1;
+    .transition();
+    .mask(25px, 25px);
+    background: url('../../images/i_subscribe.png') no-repeat 50% 50%;
+}
+.newsletter-block .button:hover,
+.newsletter-block .button:focus {
+    opacity: 0.5;
+}
+.newsletter-block .validation-advice {
+    position: aboslute;
+    bottom: 0;
 }

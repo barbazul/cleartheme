@@ -61,13 +61,27 @@
             -->
         </reference>
         
+         <reference name="header">
+            <block type="checkout/cart_sidebar" name="cart_persistent" template="checkout/cart/persistent.phtml">
+                <action method="addItemRender"><type>simple</type><block>checkout/cart_item_renderer</block><template>checkout/cart/persistent/default.phtml</template></action>
+                <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/cart/persistent/default.phtml</template></action>
+                <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/cart/persistent/default.phtml</template></action>
+                <action method="addItemRender"><type>bundle</type><block>bundle/checkout_cart_item_renderer</block><template>checkout/cart/persistent/default.phtml</template></action>
+            </block>
+        </reference>
+        
         <reference name="left">
             <remove name="left.permanent.callout" />
+            <remove name="left.newsletter" />
         </reference>
         
         <reference name="right">
             <remove name="right.permanent.callout" />
             <remove name="paypal.partner.right.logo" />
+        </reference>
+        
+        <reference name="footer">
+            <block type="newsletter/subscribe" name="footer.newsletter" template="newsletter/subscribe.phtml" />
         </reference>
         
         <reference name="before_body_end">

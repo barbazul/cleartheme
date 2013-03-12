@@ -11,11 +11,13 @@
 /* ========================================================================== */
 
 .header-container {
-    padding: @spacing/2;
     background: #fff;
 }
 .header {
     position: relative;
+    width: @pageWidth;
+    margin: 0 auto;
+    padding: @spacing/2 0;
 }
 .header a {
     color: @linkColor;
@@ -40,28 +42,77 @@
     overflow: hidden;
 }
 
-.welcome-msg {
-    font-weight: 600;
-    text-align: right;
+.form-language {
+    position: absolute;
+    top: 10px;
+    right: 0;
 }
 
-.header .links {
-    text-align: right;
-    margin: @spacing/4 0;
+.quick-access {
+    float: right;
+    padding: round(@spacing/1.5) 0 0;
 }
-.header .links li {
-    display: inline;
+.customer-account-links {
+    float: left;
+}
+.customer-account-links li {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.customer-cart {
+    float: right;
+    padding: 0 0 10px;
+}
+.customer-cart-items {
+    display: none;
+    z-index: 999;
+    width: 250px;
+    color: @baseFontColor;
+    padding: @spacing/2;
+    background: #f6f6f6;
+    border: 1px solid @lineColor;
+}
+.customer-cart-items .summary {
+    line-height: @baseLineHeight;
+}
+.customer-cart-items .subtotal {
+    font-weight: 600;
+}
+.customer-cart-items .button {
+    .btn-general();
+}
+.customer-cart-items .actions + p {
+    margin: @spacing/2 0 0;
+}
+.customer-cart-items li {
+    line-height: @baseLineHeight;
+    margin: @spacing/4 0 0;
+    overflow: hidden; // dirty clearfix :), love it.
+}
+.customer-cart-items .btn-remove {
+    display: inline-block;
+}
+.customer-cart-items .btn-edit {
+    display: inline-block;
     margin: 0 0 0 10px;
 }
-
-.form-language {
-    text-align: right;
+.customer-cart-items .product-image {
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+.customer-cart-items .product-image img {
+    display: block;
+}
+.customer-cart-items .product-details {
+    padding: 0 0 0 round((@spacing/2)+50); // 50 because the product-image width
 }
 
 #search_mini_form {
     position: absolute;
-    top: 15px;
-    left: 310px;
+    top: 35px;
+    left: 245px;
 }
 .form-search {
     position: relative;

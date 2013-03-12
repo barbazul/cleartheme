@@ -213,17 +213,18 @@ button.button::-moz-focus-inner { /* FF Fix */
     padding: @buttonsSetPadding 0 0;
     border-top: 1px solid @lineColor;
 }
-.buttons-set .back-link {
-    float: left;
+.buttons-set .back-link,
+.buttons-set .forgot-password-link {
+    float: right;
 }
 .buttons-set .back-link small {
     display: none;
 }
 .buttons-set .f-left {
-    float: left;
+    float: right;
 }
 .buttons-set .button {
-    float: right;
+    float: left;
     .btn-general();
 }
 .buttons-set p.required {
@@ -249,7 +250,7 @@ p.required {
     font-size: 10px;
     font-weight: 600;
     font-style: italic;
-    text-align: right;
+    //text-align: right;
 }
 /* Expiration date and CVV number validation fix */
 .v-fix {
