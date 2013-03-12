@@ -54,6 +54,33 @@ Also Cleartheme_Customer module is included in the repo. This module just add a 
 ChangeLog
 ==============================
 
+## 12/03/2013
+
+    Footer css improvements.
+    Header css improvements.
+    Nav css improvements.
+    Minor fixes.
+
+
+## 11/03/2013
+
+    Invoice print page css improvements.
+    local.xml minor fix.
+    Added product image in My Account Review Details Page.
+    account.less minor fix.
+
+    Local.xml
+            Loads by default: js/lib/frontend.js
+            Loads by default: js/lib/jquery-tools/overlay.js
+            Loads by default: js/lib/jquery-tools/toolbox.expose.js
+            Loads template/customer/form/mini.login.phtml before body end
+
+    Minor improvements in head.phtml.
+    Overlay css definition in css/page.less.
+    Login overlay in global.js.
+    Minor fix in js/lib/cloud-zoom.js.
+
+
 ## 10/03/2013
 
     OPC css cleanup and general improvements.
