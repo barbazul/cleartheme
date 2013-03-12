@@ -56,9 +56,16 @@ ChangeLog
 
 ## 12/03/2013
 
-    Footer css improvements.
-    Header css improvements.
+    Header css and html improvements:
+    - Removed topLinks.
+    - Removed welcome-message.
+    - Added custom "quick-access" links and "Top Cart Tooltip" ("persistent_cart" -local.xml-).
+
+    Footer css and html improvements.
     Nav css improvements.
+    CloudZoom z-index fix.
+    Buttons in buttons-set floated right to improve forms usability.
+    Moved left newsletter to the footer. Improved template/newsletter/subscribe.phtml
     Minor fixes.
 
 
