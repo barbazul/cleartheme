@@ -36,11 +36,8 @@
     };
     
     var topCartTooltip = function () {
-        var $cart_items = $('#persistent-cart-items');
-        if ($cart_items.length > 0) {
-            var $cart = $('#persistent-cart');
-            $cart_items.css('margin-left', $cart.outerWidth()*(-1));
-            $cart.tooltip({
+        if ($('#persistent-cart-items').length > 0) {
+            $('#persistent-cart').tooltip({
                 tip: '#persistent-cart-items',
                 relative: true,
                 position: 'bottom center'

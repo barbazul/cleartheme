@@ -47,7 +47,7 @@
                 </ul>
             <?php else: ?>
                 <ul class="customer-account-links">
-                    <li><a href="<?php echo $this->getUrl('customer/account/login') ?>"><?php echo $this->__('Login') ?></a> <span class="separator">|</span> <a href="<?php echo $this->getUrl('customer/account/create') ?>"><?php echo $this->__('Register') ?></a></li>
+                    <li><a href="<?php echo $this->getUrl('customer/account/login') ?><?php echo 'referer/'.Mage::helper('core')->urlEncode($this->helper('core/url')->getCurrentUrl()) ?>"><?php echo $this->__('Login') ?></a> <span class="separator">|</span> <a href="<?php echo $this->getUrl('customer/account/create') ?>"><?php echo $this->__('Register') ?></a></li>
                 </ul>
             <?php endif ?>
             <?php echo $this->getChildHtml('cart_persistent') ?>

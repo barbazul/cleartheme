@@ -26,7 +26,7 @@
 ?>
 <div id="mini-login-box" class="overlay mini-login-overlay">
     <p><?php echo $this->__('Please login before continue') ?></p>
-    <form id="mini-login-form" action="<?php echo $this->getPostActionUrl() ?>" method="post">
+    <form id="mini-login-form" action="<?php echo $this->getPostActionUrl() ?><?php echo 'referer/'.Mage::helper('core')->urlEncode($this->helper('core/url')->getCurrentUrl()) ?>" method="post">
         <ul class="form-list">
             <li>
                 <label for="mini-login"><?php echo $this->__('Email:') ?></label>

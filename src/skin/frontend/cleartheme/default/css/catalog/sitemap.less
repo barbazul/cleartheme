@@ -6,25 +6,32 @@
 
 /* ========================================================================== */
 /* Sitemap ================================================================== */
+   @import '../less/global.less';
+   @spacing: @baseSpacing;
+/* ========================================================================== */
 
-.page-sitemap .links {
-    text-align: right;
-    margin: 0 8px -32px 0;
-}
-.page-sitemap .links a {
-    position: relative;
-    padding: 0 6px;
-}
-.page-sitemap .sitemap {
-    list-style: circle;
-    padding: 2px 0 20px 20px;
-}
-.page-sitemap .sitemap li {
-    margin: 5px 0;
-}
-.page-sitemap .sitemap li.level-0 {
-    margin: 10px 0 0;
-    font-weight: 600;
-}
-.page-sitemap .sitemap li.level-0 a {
+.page-sitemap {
+    .links {
+        text-align: right;
+        margin: 0 8px -32px 0;
+
+        a {
+            position: relative;
+            padding: 0 6px;
+        }
+    }
+    .sitemap {
+        list-style: circle;
+        padding: 2px 0 20px 20px;
+
+        li {
+            margin: 5px 0;
+        }
+        li.level-0 {
+            margin: 10px 0 0;
+            font-weight: @fontWeightBold;
+        }
+        li.level-0 a {
+        }
+    }
 }

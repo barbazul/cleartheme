@@ -7,22 +7,23 @@
 /* ========================================================================== */
 /* Login ==================================================================== */
    @import '../less/global.less';
+   @spacing: @baseSpacing;
 /* ========================================================================== */
 
 .account-login {
-}
-.account-login h2 {
-    .heading2();
-}
-.account-login p {
-    line-height: @baseLineHeight;
+    h2 {
+        .heading2();
+    }
+    p {
+        line-height: @baseLineHeight;
+    }
 }
 .new-users {
     width: 46% !important;
 }
 .registered-users {
     width: 46% !important;
-}
-.registered-users h2 + p {
-    display: none;
+    h2 + p {
+        display: none;
+    }
 }

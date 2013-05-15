@@ -1,0 +1,63 @@
+/**
+ *
+ * ClearTheme Community Edition
+ *
+ */
+
+/* ========================================================================== */
+/* Tools ==================================================================== */
+
+// Transition
+.transition (@property: all, @duration: 100ms, @ease: ease-in, @delay: 0ms) {
+    -webkit-transition: @property @duration @ease @delay;
+       -moz-transition: @property @duration @ease @delay;
+        -ms-transition: @property @duration @ease @delay;
+         -o-transition: @property @duration @ease @delay;
+            transition: @property @duration @ease @delay;
+}
+
+// Mask
+.mask (@width, @height) {
+    overflow: hidden;
+    display: block;
+    width: @width;
+    height: @height;
+    text-indent: -9999px;
+}
+
+// Clearfix
+.clearfix () {
+    *zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// Drop Shadow
+.drop-shadow (@x-axis: 0, @y-axis: 1px, @blur: 3px, @alpha: 0.2) {
+    -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+    -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+    box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+
+// Gradient
+.gradient (@color: #f8f8f8, @start: #f1f1f1, @stop: #fff) {
+    background: @color;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, @start), color-stop(1, @stop));
+    background: -ms-linear-gradient(bottom, @start, @stop);
+    background: -moz-linear-gradient(center bottom, @start 0%, @stop 100%);
+    background: -o-linear-gradient(@stop, @start);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@stop, endColorstr=@start,GradientType=0 );
+}
+
+// Border Radius
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}

@@ -18,48 +18,51 @@
     width: @pageWidth;
     margin: 0 auto;
     padding: @spacing/2 0;
-}
-.header a {
-    color: @linkColor;
-    &:hover,
-    &focus {
-        color: @linkColorHover;
+    a {
+        color: @linkColor;
+        &:hover,
+        &:focus {
+            color: @linkColorHover;
+        }
     }
 }
 
 .logo {
     float: left;
-}
-.logo strong {
-    position: absolute;
-    top: -9999px;
-    left: -999em;
-    width: 0; 
-    height: 0;
-    font-size: 0;
-    line-height: 0;
-    text-indent: -9999px;
-    overflow: hidden;
+    strong {
+        position: absolute;
+        top: -9999px;
+        left: -999em;
+        width: 0; 
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+        text-indent: -9999px;
+        overflow: hidden;
+    }
 }
 
+// Store View Switcher
 .form-language {
     position: absolute;
     top: 10px;
     right: 0;
 }
 
+// Quick Access
 .quick-access {
     float: right;
     padding: round(@spacing/1.5) 0 0;
 }
 .customer-account-links {
     float: left;
-}
-.customer-account-links li {
-    float: left;
-    margin: 0 10px 0 0;
+    li {
+        float: left;
+        margin: 0 10px 0 0;
+    }
 }
 
+// Top Cart
 .customer-cart {
     float: right;
     padding: 0 0 10px;
@@ -70,45 +73,47 @@
     width: 250px;
     color: @baseFontColor;
     padding: @spacing/2;
-    background: #f6f6f6;
+    background: @baseBackground;
     border: 1px solid @lineColor;
-}
-.customer-cart-items .summary {
-    line-height: @baseLineHeight;
-}
-.customer-cart-items .subtotal {
-    font-weight: 600;
-}
-.customer-cart-items .button {
-    .btn-general();
-}
-.customer-cart-items .actions + p {
-    margin: @spacing/2 0 0;
-}
-.customer-cart-items li {
-    line-height: @baseLineHeight;
-    margin: @spacing/4 0 0;
-    overflow: hidden; // dirty clearfix :), love it.
-}
-.customer-cart-items .btn-remove {
-    display: inline-block;
-}
-.customer-cart-items .btn-edit {
-    display: inline-block;
-    margin: 0 0 0 10px;
-}
-.customer-cart-items .product-image {
-    float: left;
-    width: 50px;
-    height: 50px;
-}
-.customer-cart-items .product-image img {
-    display: block;
-}
-.customer-cart-items .product-details {
-    padding: 0 0 0 round((@spacing/2)+50); // 50 because the product-image width
+
+    .summary {
+        line-height: @baseLineHeight;
+    }
+    .subtotal {
+        font-weight: @fontWeightBold;
+    }
+    .button {
+        .btn-general();
+    }
+    .actions + p {
+        margin: @spacing/2 0 0;
+    }
+    li {
+        line-height: @baseLineHeight;
+        margin: @spacing/4 0 0;
+        .clearfix();
+    }
+    .btn-remove {
+        display: inline-block;
+    }
+    .btn-edit {
+        display: inline-block;
+        margin: 0 0 0 10px;
+    }
+    .product-image {
+        float: left;
+        width: 50px;
+        height: 50px;
+        img {
+            display: block;
+        }
+    }
+    .product-details {
+        padding: 0 0 0 round((@spacing/2)+50); // 50 because the product-image width
+    }
 }
 
+// Form Search
 #search_mini_form {
     position: absolute;
     top: 35px;
@@ -117,46 +122,49 @@
 .form-search {
     position: relative;
     width: 260px;
-}
-.form-search label {
-    display: none;
-}
-.form-search .input-text {
-    width: 250px;
-    height: 17px;
-}
-.form-search .button {
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    opacity: 1;
-    .transition();
-    .mask(25px, 25px);
-    background: url('../../images/i_search.png') no-repeat 50% 50%;
-}
-.form-search .button:hover,
-.form-search .button:focus {
-    opacity: 0.5;
-}
 
-.form-search .search-autocomplete {
-    z-index: 999;
-    margin: -1px 0 0;
-}
-.form-search .search-autocomplete ul {
-    background: #fff;
-    border: 1px solid #ec1c25;
-    border-top: 0;
-}
-.form-search .search-autocomplete li {
-    cursor: pointer;
-    padding: @spacing/4 @spacing/8;
-    border-top: 1px solid #eee;
-}
-.form-search .search-autocomplete li .amount {
-    float: right;
-    font-weight: 600;
-}
-.form-search .search-autocomplete li.selected {
-    color: @linkColorHover;
+    label {
+        display: none;
+    }
+    .input-text {
+        width: 250px;
+        height: 17px;
+    }
+    .button {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        > span {
+            opacity: 1;
+            background: url('../../images/i_search.png') no-repeat 50% 50%;
+            .mask(25px, 25px);
+            .transition();
+        }
+        &:hover > span,
+        &:focus > span {
+            opacity: 0.5;
+        }
+    }
+    .search-autocomplete {
+        z-index: 999;
+        margin: -1px 0 0;
+
+        ul {
+            background: #fff;
+            border: 1px solid #ec1c25;
+            border-top: 0;
+        }
+        li {
+            cursor: pointer;
+            padding: @spacing/4 @spacing/8;
+            border-top: 1px solid #eee;
+            .amount {
+                float: right;
+                font-weight: @fontWeightBold;
+            }
+            &.selected {
+                color: @linkColorHover;
+            }
+        }
+    }
 }

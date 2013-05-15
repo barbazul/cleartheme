@@ -11,62 +11,66 @@
 /* ========================================================================== */
 
 .footer-container {
-    margin: @spacing/8 0 0;
     background: #fff;
+    border-top: 5px solid @baseBackground;
 }
 .footer {
     width: @pageWidth;
     margin: 0 auto;
     padding: @spacing/2 0;
     line-height: @baseLineHeight;
-}
-.footer a {
-    color: @linkColorHover;
-    &:hover,
-    &focus {
-        color: @linkColor;
+
+    a {
+        color: @linkColorHover;
+        &:hover,
+        &:focus {
+            color: @linkColor;
+        }
     }
-}
-.footer p {
-    margin: @spacing/8 0;
-}
-.footer ul {
-}
-.footer ul li {
-    display: inline;
-    margin-right: 5px;
+    p {
+        margin: @spacing/8 0;
+    }
+    ul {
+    }
+    li {
+        display: inline;
+        margin-right: 5px;
+    }
 }
 
 .newsletter-block {
     float: right;
-}
-.newsletter-block div {
-    position: relative;
-    width: 260px;
-    height: 27px;
 
-}
-.newsletter-block label {
-    display: block;
-}
-.newsletter-block .input-text {
-    width: 250px;
-    height: 17px;
-}
-.newsletter-block .button {
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    opacity: 1;
-    .transition();
-    .mask(25px, 25px);
-    background: url('../../images/i_subscribe.png') no-repeat 50% 50%;
-}
-.newsletter-block .button:hover,
-.newsletter-block .button:focus {
-    opacity: 0.5;
-}
-.newsletter-block .validation-advice {
-    position: aboslute;
-    bottom: 0;
+    div {
+        position: relative;
+        width: 260px;
+        height: 27px;
+
+    }
+    label {
+        display: block;
+    }
+    .input-text {
+        width: 250px;
+        height: 17px;
+    }
+    .button {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        > span {
+            opacity: 1;
+            background: url('../../images/i_subscribe.png') no-repeat 50% 50%;
+            .mask(25px, 25px);
+            .transition();
+        }
+        &:hover > span,
+        &:focus > span {
+            opacity: 0.5;
+        }
+    }
+    .validation-advice {
+        position: aboslute;
+        bottom: 0;
+    }
 }

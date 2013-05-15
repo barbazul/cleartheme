@@ -13,117 +13,111 @@
 .category-title {
 }
 .category-image {
-}
-.category-image img {
-    display: block;
-    margin: 0 auto;
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
 }
 .category-description {
 }
 .category-products {
 }
 
-/* Advanced Search */
-.advanced-search {
-}
-.advanced-search-amount {
-}
-.advanced-search-summary {
-}
-
-/* Toolbar */
+// Toolbar
 .toolbar {
     border-top: 1px solid @lineColor;
     border-bottom: 1px solid @lineColor;
 }
 .toolbar-bottom {
 }
-
-/* Pager */
+// Pager
 .toolbar .pager {
     text-align: center;
     line-height: 30px;
-}
-.toolbar .pager .amount {
-    float: left;
-}
-.toolbar .pager .limiter {
-    float: right;
-}
-.toolbar .pager .pages {
 
+    .amount {
+        float: left;
+    }
+    .limiter {
+        float: right;
+    }
+    .pages {
+        ol {
+            display: inline;
+        }
+        li {
+            display: inline;
+            margin: 0 2px;
+        }
+        .current {
+        }
+    }
+    .next:hover,
+    .next:focus,
+    .previous:hover,
+    .previous:focus {
+        opacity: 0.6;
+    }
 }
-.toolbar .pager .pages ol {
-    display: inline;
-}
-.toolbar .pager .pages li {
-    display: inline;
-    margin: 0 2px;
-}
-.toolbar .pager .pages .current {
-}
-.toolbar .pager .next:hover,
-.toolbar .pager .next:focus,
-.toolbar .pager .previous:hover,
-.toolbar .pager .previous:focus {
-    opacity: 0.6;
-}
-
-/* Sorter */
+// Sorter
 .toolbar .sorter {
     line-height: 30px;
     border-top: 1px solid @lineColor;
+
+    .sort-by {
+        float: right;
+
+        a:hover,
+        a:focus {
+            opacity: 0.6;
+        }
+    }
 }
-.toolbar .sorter .sort-by {
-    float: right;
-}
-.toolbar .sorter .sort-by a:hover,
-.toolbar .sorter .sort-by a:focus {
-    opacity: 0.6;
-}
-/* View Mode */
+// View Mode
 .view-mode {
     position: relative;
     top: 8px;
     float: left;
     width: 38px;
     height: 13px;
-}
-.view-mode label {
-    display: none;
-}
-.view-mode a,
-.view-mode strong {
-    position: absolute;
-    width: 16px;
-    height: 13px;
-    text-indent: -9999px;
-    background: url('../../images/i_toolbar-view-mode.png') no-repeat 0 0;
-}
-.view-mode a:hover,
-.view-mode a:focus {
-    opacity: 0.7;
-}
-.view-mode a.grid {
-    left: 0;
-    background-position: 0 0;
-}
-.view-mode strong.grid {
-    left: 0;
-    opacity: 0.5;
-    background-position: 0 0;
-}
-.view-mode a.list {
-    right: 0;
-    background-position: 0 100%;
-}
-.view-mode strong.list {
-    right: 0;
-    opacity: 0.5;
-    background-position: 0 100%;
+
+    label {
+        display: none;
+    }
+    a,
+    strong {
+        position: absolute;
+        width: 16px;
+        height: 13px;
+        text-indent: -9999px;
+        background: url('../../images/i_toolbar-view-mode.png') no-repeat 0 0;
+    }
+    a:hover,
+    a:focus {
+        opacity: 0.7;
+    }
+    a.grid {
+        left: 0;
+        background-position: 0 0;
+    }
+    strong.grid {
+        left: 0;
+        opacity: 0.5;
+        background-position: 0 0;
+    }
+    a.list {
+        right: 0;
+        background-position: 0 100%;
+    }
+    strong.list {
+        right: 0;
+        opacity: 0.5;
+        background-position: 0 100%;
+    }
 }
 
-/* Generic Styles: Applies for GRID and LIST */
+// Generic styles: applies for GRID and LIST
 .category-products .product-name a {
 
     &:hover,
@@ -133,93 +127,151 @@
 .category-products .availability {
 }
 
-/* View Type: Grid */
+// View Type: Grid
 .products-grid {
     position: relative;
     border-bottom: 1px solid @lineColor;
-}
-.products-grid.last {
-    border-bottom: 0;
-}
-.products-grid li.item {
-    float: left;
-    width: 140px;
-    padding: @spacing/2 @spacing/4 100px; // The 100px is the height =)
-}
-.products-grid .product-image {
-    display: block;
-    width: 135px;
-    height: 135px;
-    margin: 0 0 @spacing/4;
-}
-.products-grid .product-name {
-    margin: 0 0 @spacing/4;
-}
-.products-grid .price-box {
-}
-.products-grid .actions {
-    position: absolute;
-    bottom: @spacing/2; // SAME AS .products-grid li.item PADDING-TOP
-}
-.products-grid .btn-cart {
-    .btn-general();
-    margin: 0 0 @spacing/4;
-}
-.products-grid .add-to-links {
-}
-.products-grid .add-to-links li {
-}
-.products-grid .add-to-links .separator {
-    display: none;
+
+    &.last {
+        border-bottom: 0;
+    }
+    li.item {
+        float: left;
+        width: 140px;
+        padding: @spacing/2 @spacing/4 100px; // the 100px is the height =)
+    }
+    .product-image {
+        display: block;
+        width: 135px;
+        height: 135px;
+        margin: 0 0 @spacing/4;
+        img {
+            display: block;
+        }
+    }
+    .product-name {
+        margin: 0 0 @spacing/4;
+    }
+    .price-box {
+    }
+    .actions {
+        position: absolute;
+        bottom: @spacing/2; // SAME AS li.item PADDING-TOP
+    }
+    .btn-cart {
+        .btn-general();
+        margin: 0 0 @spacing/4;
+    }
+    .add-to-links {
+        li {
+        }
+        .separator {
+            display: none;
+        }
+    }
 }
 
+@spacing: round(@baseSpacing/2);
 
-/* View Type: List */
-.products-list li.item {
-    padding: @spacing 0;
-    border-bottom: 1px solid @lineColor;
+// View Type: List
+.products-list {
+    li.item {
+        padding: @spacing 0;
+        border-bottom: 1px solid @lineColor;
+        &.last {
+            border-bottom: 0;
+        }
+    }
+    .product-image {
+        float: left;
+        width: 135px;
+        height: 135px;
+        img {
+            display: block;
+        }
+    }
+    .product-shop {
+        margin-left: round((@spacing/2)+135); // 135 because product-image width
+    }
+    .product-name {
+        margin: 0 0 @spacing/4;
+    }
+    .price-box {
+        margin: 0 0 @spacing/4;
+    }
+    .price-box + p { // this is .btn-cart wrapper -.-'
+        margin: 0 0 @spacing/4;
+    }
+    .btn-cart {
+        .btn-general();
+    }
+    .desc {
+        line-height: @baseLineHeight;
+        margin: 0 0 @spacing/4;
+
+        .link-learn:before { // this simulate a line-break
+            content: ' ';
+            display: block;
+        }
+        .link-learn {
+        }
+    }
+    .add-to-links {
+        li {
+            display: inline;
+        }
+        .separator {
+            display: inline;
+    }
+    }
 }
-.products-list li.item.last {
-    border-bottom: 0;
+
+// Layered Navigation
+.block-layered-nav {
+    .block-subtitle {
+        margin: 0 0 @spacing;
+    }
+    dt {
+        font-weight: @fontWeightBold;
+        margin: @spacing/2 0;
+    }
+    dd {
+        margin: 0 0 @spacing;
+    }
+    dd li {
+        margin: @spacing/4 0;
+    }
+    dd.last,
+    dd.last li {
+        margin-bottom: 0;
+    }
+    // Layered Navigation Filter
+    .currently {
+        margin: 0 0 10px;
+        li {
+            position: relative;
+            margin: @spacing/2 0;
+            padding: 0 0 0 @spacing/2;
+        }
+        .label {
+        }
+        .value {
+        }
+    }
+    .btn-remove {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .actions {
+        margin: 0 0 @spacing;
+    }
 }
-.products-list .product-image {
-    float: left;
-    width: 135px;
-    height: 135px;
+
+// Advanced Search
+.advanced-search {
 }
-.products-list .product-image img {
-    display: block;
+.advanced-search-amount {
 }
-.products-list .product-shop {
-    margin-left: round((@spacing/2)+135); // 135 because product-image width
-}
-.products-list .product-name {
-    margin: 0 0 @spacing/4;
-}
-.products-list .price-box {
-    margin: 0 0 @spacing/4;
-}
-.products-list .price-box + p { // This is the .btn-cart wrapper -.-'
-    margin: 0 0 @spacing/4;
-}
-.products-list .btn-cart {
-    .btn-general();
-}
-.products-list .desc {
-    line-height: @baseLineHeight;
-    margin: 0 0 @spacing/4;
-}
-.products-list .desc .link-learn:before { // this simulate a line-break
-    content: ' ';
-    display: block;
-}
-.products-list .desc .link-learn {
-}
-.products-list .add-to-links {
-}
-.products-list .add-to-links li {
-    display: inline;
-}
-.products-list .add-to-links .separator {
-    display: inline;
+.advanced-search-summary {
 }

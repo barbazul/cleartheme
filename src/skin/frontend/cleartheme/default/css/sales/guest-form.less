@@ -7,23 +7,24 @@
 /* ========================================================================== */
 /* Guest Form =============================================================== */
    @import '../less/global.less';
+   @spacing: @baseSpacing;
 /* ========================================================================== */
 
 .breadcrumbs {
     display: none;
 }
 
-.form-alt li {
-    color: #666;
-    padding: 0 0 10px;
-    overflow: hidden;
-}
-.form-alt label {
-    font-weight: 600;
-    line-height: 1.8;
-}
-
-/* Buttons Set */
-.form-alt .button {
-    .btn-general();
+.form-alt {
+    li {
+        color: @altFontColor;
+        padding: 0 0 10px;
+        .clearfix();
+    }
+    label {
+        font-weight: @fontWeightBold;
+        line-height: 1.8;
+    }
+    .button {
+        .btn-general();
+    }
 }

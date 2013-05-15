@@ -151,7 +151,6 @@
         <reference name="head">
             <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
-            <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-view.less</stylesheet></action>
             
@@ -165,7 +164,6 @@
             <action method="addCss"><stylesheet>css/page/pager.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
-            <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-view.less</stylesheet></action>
             
@@ -175,11 +173,15 @@
     </review_product_list>
     
     <review_product_view>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
         <reference name="head">
-            <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-view.less</stylesheet></action>
+            
+            <action method="setRobots"><value>NOINDEX,FOLLOW</value></action>
         </reference>
     </review_product_view>
     
@@ -198,13 +200,10 @@
     </catalog_product_compare_index>
     
     <catalog_category_default>
-        <!--
         <reference name="root">
             <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
         </reference>
-        -->
         <reference name="head">
-            <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
@@ -217,13 +216,10 @@
     </catalog_category_default>
     
     <catalog_category_layered>
-        <!--
         <reference name="root">
             <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
         </reference>
-        -->
         <reference name="head">
-            <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
@@ -236,13 +232,10 @@
     </catalog_category_layered>
     
     <catalogsearch_result_index>
-        <!--
         <reference name="root">
             <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
         </reference>
-        -->
         <reference name="head">
-            <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
@@ -259,7 +252,6 @@
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="head">
-            <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
@@ -294,13 +286,10 @@
     </catalog_seo_sitemap>
     
     <tag_product_list>
-        <!--
         <reference name="root">
             <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
         </reference>
-        -->
         <reference name="head">
-            <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/product-list.less</stylesheet></action>
@@ -388,7 +377,6 @@
             <action method="addCss"><stylesheet>css/catalog/general.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/catalog/price.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/pager.less</stylesheet></action>
-            <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
         </reference>
         
         <reference name="customer_account_navigation">
@@ -418,7 +406,6 @@
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="head">
-            <action method="addCss"><stylesheet>css/page/block.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/rss.less</stylesheet></action>
         </reference>
     </rss_index_index>

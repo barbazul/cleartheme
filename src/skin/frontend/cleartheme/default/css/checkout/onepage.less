@@ -10,168 +10,168 @@
    @spacing: @baseSpacing;
 /* ========================================================================== */
 
+// Block Progress
 .block-progress {
-}
-.block-progress .block-title {
-    font-size: @baseFontSize+2;
-    font-weight: 600;
-    margin: 0 0 @spacing/4;
-}
-.block-progress dt {
-    color: lighten(@baseFontColor, 30%);
-    font-weight: 600;
-    padding: @spacing/4;
-    border-bottom: 1px solid @lineColor;
-}
-.block-progress a {
-    float: right;
-    .mask(11px, 11px);
-    background: url('../../images/btn_edit.gif') no-repeat 0 0;
-}
-.block-progress a:hover,
-.block-progress a:focus {
-    opacity: 0.6;
-}
-.block-progress .separator {
-    display: none;
-}
-.block-progress dt.complete {
-    color: @baseFontColor;
-}
-.block-progress dd.complete {
-    line-height: @baseLineHeight;
-    padding: @spacing/4;
-    border-bottom: 1px solid @lineColor;
+    .block-title {
+        font-size: @baseFontSize+2;
+        font-weight: @fontWeightBold;
+        margin: 0 0 @spacing/4;
+    }
+    dt {
+        color: lighten(@baseFontColor, 30%);
+        font-weight: @fontWeightBold;
+        padding: @spacing/4;
+        border-bottom: 1px solid @lineColor;
+    }
+    a {
+        float: right;
+        .mask(11px, 11px);
+        background: url('../../images/btn_edit.gif') no-repeat 0 0;
+        &:hover,
+        &:focus {
+            opacity: 0.6;
+        }
+    }
+    .separator {
+        display: none;
+    }
+    dt.complete {
+        color: @baseFontColor;
+    }
+    dd.complete {
+        line-height: @baseLineHeight;
+        padding: @spacing/4;
+        border-bottom: 1px solid @lineColor;
+    }
 }
 
-
+// OPC
 .opc {
     position: relative;
     border-bottom: 1px solid @lineColor;
-}
-.opc li.section {
-    border: 1px solid @lineColor;
-    border-bottom: 0;
-}
-.opc p.required {
-    height: 0;
-    line-height: 0;
-    margin: 0;
-    position: relative;
-    top: -@spacing;
-}
-.opc .buttons-set.disabled button.button {
-    display: none;
-}
-.opc .buttons-set .please-wait {
-    // the height and line-height should be same height of Continue Button
-    height: 24px;
-    line-height: 24px;
+
+    li.section {
+        border: 1px solid @lineColor;
+        border-bottom: 0;
+    }
+    p.required {
+        height: 0;
+        line-height: 0;
+        margin: 0;
+        position: relative;
+        top: -@spacing;
+    }
+    .buttons-set.disabled button.button {
+        display: none;
+    }
+    .buttons-set .please-wait {
+        // the height and line-height should be same height of Continue Button
+        height: 24px;
+        line-height: 24px;
+    }
+    .step-title {
+        background: @baseBackground;
+        .number {
+            float: left;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            font-weight: @fontWeightBold;
+            line-height: 30px;
+            text-align: center;
+            background: #000;
+        }
+        h2 {
+            float: left;
+            font-weight: @fontWeightBold;
+            line-height: 30px;
+            padding: 0 0 0 ((@spacing)-30);
+        }
+        a {
+            display: none;
+        }
+    }
+    .allow {
+        .step-title {
+            cursor: pointer;
+        }
+    }
+    .active {
+        .step-title {
+            cursor: default;
+            background-color: @lineColor;
+            h2 {
+                color: #fff;
+            }
+        }
+    }
+    .step {
+        position: relative;
+        padding: @spacing;
+        border-top: 1px solid @lineColor;
+    }
 }
 
-.opc .step-title {
-    background: #eee;
-}
-.opc .step-title .number {
-    float: left;
-    color: #fff;
-    width: 30px;
-    height: 30px;
-    font-weight: 600;
-    line-height: 30px;
-    text-align: center;
-    background: #000;
-}
-.opc .step-title h2 {
-    float: left;
-    font-weight: 600;
-    line-height: 30px;
-    padding: 0 0 0 ((@spacing)-30);
-}
-.opc .step-title a {
-    display: none;
-}
-.opc .allow .step-title {
-    cursor: pointer;
-}
-.opc .active {
-}
-.opc .active .step-title {
-    cursor: default;
-    background-color: @lineColor;
-}
-.opc .active .step-title h2 {
-    color: #fff;
-}
-.opc .step {
-    position: relative;
-    padding: @spacing;
-    border-top: 1px solid @lineColor;
-}
-
-/* Login Step */
-#checkout-step-login h3 {
-    .heading2();
-}
-#checkout-step-login p {
-    line-height: @baseLineHeight;
-}
-#checkout-step-login .col-1 .form-list li {
-    margin: @spacing/4 0;
-}
-#checkout-step-login .col-1 h4 {
-    .heading3();
-    margin-top: @spacing/2;
-}
-#checkout-step-login .col-1 .ul {
-    list-style: disc;
-    margin-top: @spacing/8;
-    padding-left: 16px;
-    line-height: @baseLineHeight;
-}
-#checkout-step-login .col-2 h4 {
-    .heading3();
-    display: inline;
-}
-#checkout-step-login .col-2 h4 + p {
-    display: inline;
-}
-#checkout-step-login .col-2 .form-list {
-    margin-top: @spacing/4;
-}
-#checkout-step-login .col-2 .f-left {
-    height: 0;
-    line-height: 0;
-    margin: 0;
-    position: relative;
-    top: (round(@spacing*1.10))*(-1);
+// Login Step
+#checkout-step-login {
+    h3 {
+        .heading2();
+    }
+    p {
+        line-height: @baseLineHeight;
+    }
+    .col-1 {
+        .form-list li {
+            margin: @spacing/4 0;
+        }
+        h4 {
+            .heading3();
+            margin-top: @spacing/2;
+        }
+        .ul {
+            list-style: disc;
+            margin-top: @spacing/8;
+            padding-left: 16px;
+            line-height: @baseLineHeight;
+        }
+    }
+    .col-2 {
+        h4 {
+            .heading3();
+            display: inline;
+        }
+        h4 + p {
+            display: inline;
+        }
+        .form-list {
+            margin-top: @spacing/4;
+        }
+        .f-left {
+            height: 0;
+            line-height: 0;
+            margin: 0;
+            position: relative;
+            top: (round(@spacing*1.10))*(-1);
+        }
+    }
 }
 
-/* Review Step */
-.order-review .product-image {
-    width: 80px;
-    height: 80px;
-    float: left;
+// Review Step
+.order-review {
+    .product-image {
+        width: 80px;
+        height: 80px;
+        float: left;
+        img {
+            display: block;
+        }
+    }
+    .product-details {
+        margin: 0 0 0 100px;
+    }
+    .product-sku {
+    }
+    .product-name {
+        margin: @spacing/8 0;
+    }
 }
-.order-review .product-image img {
-    display: block;
-}
-.order-review .product-details {
-    margin: 0 0 0 100px;
-}
-.order-review .product-sku {
-}
-.order-review .product-name {
-    margin: @spacing/8 0;
-}
-
-/* Multiple Addresses Checkout */
-.checkout-progress { padding:0 50px; margin:10px 0; }
-.checkout-progress li { float:left; width:20%; border-top:5px solid #ccc; text-align:center; color:#ccc; }
-.checkout-progress li.active { border-top-color:#000; color:#000; }
-
-.multiple-checkout { position:relative; }
-.multiple-checkout .tool-tip { top:50%; margin-top:-120px; right:10px; }
-.multiple-checkout .grand-total { font-size:1.5em; text-align:right; }
-.multiple-checkout .grand-total big {}
-.multiple-checkout .grand-total .price {}

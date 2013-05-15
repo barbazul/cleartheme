@@ -10,8 +10,7 @@
    @spacing: @baseSpacing;
 /* ========================================================================== */
 
-/* Tools ==================================================================== */
-// TODO: remove this "tools" if possible.
+// Tools | TODO: remove if possible.
 .hidden       { display:block !important; border:0 !important; margin:0 !important; padding:0 !important; font-size:0 !important; line-height:0 !important; width:0 !important; height:0 !important; overflow:hidden !important; }
 .nobr         { white-space:nowrap !important; }
 .wrap         { white-space:normal !important; }
@@ -22,15 +21,14 @@
 .f-fix        { float:left; width:100%; }
 .no-display   { display:none; }
 
-
-/* Layout =================================================================== */
+// General
 html {
-    background: #f3f3f3;
+    background: @baseBackground;
 }
 body {
     color: @baseFontColor;
     font-size: @baseFontSize;
-    .serif();
+    font-family: @serifFontFamily;
 }
 a {
     cursor: pointer;
@@ -40,13 +38,14 @@ a {
 }
 ::selection {
     color: #fff;
-    background: #ec1c25; 
+    background: @color1; 
 }
 ::-moz-selection {
     color: #fff;
-    background: #ec1c25;
+    background: @color1;
 }
 
+// Layout
 .wrapper {
 }
 .page {
@@ -69,7 +68,7 @@ a {
     padding: @spacing/2 0;
 }
 
-/* Base Columns */
+// Base Columns
 .col-left {
     float: left;
     width: 224px;
@@ -83,83 +82,115 @@ a {
     width: 224px;
 }
 
-/* 1 Column Layout */
+// 1 Column Layout
 .col1-layout .col-main {
     float: none;
     width: auto;
 }
 
-/* 2 Columns Layout */
+// 2 Columns Layout
 .col2-left-layout .col-main {
     float: right;
 }
 .col2-right-layout .col-main {
 }
 
-/* 3 Columns Layout */
-.col3-layout .col-main {
-    width: 480px;
+// 3 Columns Layout
+.col3-layout {
+    .col-main {
+        width: 480px;
+    }
+    .col-wrapper {
+        float: left;
+        width: 720px;
+
+        .col-main {
+            float: right;
+        }
+    }
 }
-.col3-layout .col-wrapper {
-    float: left;
-    width: 720px;
+
+// Content Columns
+.col2-set {
+    .col-1 {
+        float: left;
+        width: 49%;
+    }
+    .col-2 {
+        float: right;
+        width: 49%;
+    }
+    .col-narrow {
+        width: 33%;
+    }
+    .col-wide {
+        width: 65%;
+    }
 }
-.col3-layout .col-wrapper .col-main {
-    float: right;
+.col3-set {
+    .col-1 {
+        float: left;
+        width: 32%;
+    }
+    .col-2 {
+        float: left;
+        width: 32%;
+        margin-left: 2%;
+    }
+    .col-3 {
+        float: right;
+        width: 32%;
+    }
+}
+.col4-set {
+    .col-1 {
+        float: left;
+        width: 23.5%;
+    }
+    .col-2 {
+        float: left;
+        width: 23.5%;
+        margin: 0 2%;
+    }
+    .col-3 {
+        float: left;
+        width: 23.5%;
+    }
+    .col-4 {
+        float: right;
+        width: 23.5%;
+    }
 }
 
-/* Content Columns */
-.col2-set .col-1 { float:left; width:49%; }
-.col2-set .col-2 { float:right; width:49%; }
-.col2-set .col-narrow { width:33%; }
-.col2-set .col-wide { width:65%; }
-
-.col3-set .col-1 { float:left; width:32%; }
-.col3-set .col-2 { float:left; width:32%; margin-left:2%; }
-.col3-set .col-3 { float:right; width:32%; }
-
-.col4-set .col-1 { float:left; width:23.5%; }
-.col4-set .col-2 { float:left; width:23.5%; margin:0 2%; }
-.col4-set .col-3 { float:left; width:23.5%; }
-.col4-set .col-4 { float:right; width:23.5%; }
-
-
-/* Global Styles ============================================================ */
-
-/* Global Messages  */
+// Global Messages
 .success {
     color: #3d6611; 
-    font-weight: 600;
+    font-weight: @fontWeightBold;
 }
 .error {
     color: #f00;
-    font-weight: 600;
+    font-weight: @fontWeightBold;
 }
 .notice {
     color: #ccc;
 }
-.messages,
-.messages ul {
-    list-style:none !important; 
-    margin: 0 !important; 
-    padding: 0 !important;
-}
 .messages {
     width: 100%; 
-    overflow: hidden;
-}
-.messages li {
-    margin: 0 0 20px;
-}
-.messages li li {
-    margin: 0;
+    .clearfix();
+
+    li {
+        margin: 0 0 20px;
+        li {
+            margin: 0;
+        }
+    }
 }
 .error-msg,
 .success-msg,
 .note-msg,
 .notice-msg {
-    font-size: 11px !important;
-    font-weight: 600 !important;
+    font-size: (@baseFontSize)-1 !important;
+    font-weight: @fontWeightBold !important;
     background-position: 10px 50% !important; 
     background-repeat: no-repeat !important; 
     padding: 10px 10px 10px 36px !important; 
@@ -182,44 +213,45 @@ a {
     background-image: url('../../images/i_msg-note.gif');
 }
 
-/* BreadCrumbs */
+// Breadcrumbs
 .breadcrumbs {
     margin: 0 0 15px;
-}
-.breadcrumbs li {
-    display: inline;
-}
-.breadcrumbs a {
-    color: @linkColor;
-    &:hover,
-    &focus {
-        color: @linkColorHover;
+
+    li {
+        display: inline;
+    }
+    a {
+        color: @linkColor;
+        &:hover,
+        &:focus {
+            color: @linkColorHover;
+        }
     }
 }
 
-/* Page Heading */
+// Page Heading
 .page-title {
     margin: 0 0 25px;
-}
-.page-title h1,
-.page-title h2 {    
-    .heading1();
-}
-.page-title .separator {
-}
-.page-title .link-rss {
-    float: right;
+    h1,
+    h2 {    
+        .heading1();
+    }
+    .separator {
+    }
+    .link-rss {
+        float: right;
+    }
 }
 .title-buttons {
     text-align: right;
-}
-.title-buttons h1,
-.title-buttons h2,
-.title-buttons h3,
-.title-buttons h4,
-.title-buttons h5,
-.title-buttons h6 {
-    float: left;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        float: left;
+    }
 }
 
 .subtitle,
@@ -228,51 +260,52 @@ a {
     .heading2();
 }
 
-/* Links */
+// Links
 .col-main a {
     color: @linkColor;
     &:hover,
-    &focus {
+    &:focus {
         color: @linkColorHover;
     }
 }
 
-/* Data Table */
+// Data Table
 .data-table {
     width: 100%;
-}
-.data-table th {
-    font-weight: 600;
-    text-align: left;
-    white-space: nowrap;
-    padding: @spacing/8;
-    border: 1px solid @tableLineColor;
-}
-.data-table td {
-    padding:  @spacing/8;
-    vertical-align: top;
-    border: 1px solid @tableLineColor;
-}
-.data-table thead {
-    background: @tableHeadBkg;
-}
-.data-table tbody {
-}
-.data-table tfoot {
-}
-.data-table th .tax-flag {
-    font-weight: 400;
-    white-space: nowrap;
-}
-.data-table td.label,
-.data-table th.label {
-    font-weight: 600;
-    background: @tableHeadBkg;
-}
-.data-table td.value {
+
+    th {
+        font-weight: @fontWeightBold;
+        text-align: left;
+        white-space: nowrap;
+        padding: @spacing/8;
+        border: 1px solid @tableLineColor;
+    }
+    td {
+        padding:  @spacing/8;
+        vertical-align: top;
+        border: 1px solid @tableLineColor;
+    }
+    thead {
+        background: @tableHeadBackground;
+    }
+    tbody {
+    }
+    tfoot {
+    }
+    th .tax-flag {
+        font-weight: @fontWeightBold;
+        white-space: nowrap;
+    }
+    td.label,
+    th.label {
+        font-weight: @fontWeightBold;
+        background: @tableHeadBackground;
+    }
+    td.value {
+    }
 }
 
-/* Misc */
+// Misc
 .link-print {
     padding: 2px 0 2px 25px;
     background: url('../../images/i_print.gif') no-repeat 0 50%;
@@ -283,45 +316,36 @@ a {
     background: url('../../images/i_rss.gif') no-repeat 0 50%;
 }
 .btn-remove {
-    display: block;
-    width: 11px;
-    height: 11px;
-    font-size: 0;
-    line-height: 0;
-    text-indent: -9999px;
+    .mask(11px, 11px);
     background: url('../../images/btn_remove.gif') no-repeat 0 0;
-    overflow: hidden;
+    &:hover,
+    &:focus {
+        opacity: 0.6;
+    }
 }
-.btn-remove:hover,
-.btn-remove:focus {
-    opacity: 0.6;
-}
-
 .btn-remove2 {
     .mask(16px, 16px);
     background: url('../../images/btn_trash.gif') no-repeat 0 0;
+    &:hover,
+    &:focus {
+        opacity: 0.6;
+    }
 }
-.btn-remove2:hover,
-.btn-remove2:focus {
-    opacity: 0.6;
-}
-
 .btn-edit {
     .mask(11px, 11px);
     background: url('../../images/btn_edit.gif') no-repeat 0 0;
+    &:hover,
+    &:focus {
+        opacity: 0.6;
+    }
 }
-.btn-edit:hover,
-.btn-edit:focus {
-    opacity: 0.6;
-}
-
 .separator {
     color: lighten(@baseFontColor, 50%);
     font-size: 90%;
     margin: 0 3px;    
 }
 
-/* Important Notice */
+// Important Notice
 .noscript,
 .demo-notice,
 .notice-cookie {
@@ -336,7 +360,7 @@ a {
 .notice-cookie a {
     color: @linkColor;
     &:hover,
-    &focus {
+    &:focus {
         color: @linkColorHover;
     }
 }
@@ -345,7 +369,7 @@ a {
     margin-top: 5px;
 }
 
-/* Tooltip */
+// Tooltip
 .tooltip {
     display: none;
     width: 200px;
@@ -353,27 +377,11 @@ a {
     line-height: @baseLineHeight;
     padding: @spacing/2;
     margin: -10px 0 0;
-    background: #f6f6f6;
+    background: @baseBackground;
     border: 1px solid @lineColor;
 }
-/* >> 
-    // This styles can be removed but first need to validate this file:
-    // app/design/frontend/base/default/template/authorizenet/directpost/form.phtml
-    // and use the above tooltip css and js.
-    .tool-tip {
-        position: absolute;
-        z-index:9999;
-        color: @baseFontColor;
-        padding: @spacing/2;
-        background: #f6f6f6;
-        border: 1px solid @lineColor;
-    }
-    .tool-tip .btn-close { text-align:right; }
-    .tool-tip .btn-close a { display:block; margin:0 0 0 auto; width:15px; height:15px; background:url('../../images/btn_window_close.gif') 100% 0 no-repeat; text-align:left; text-indent:-999em; overflow:hidden; }
-    .tool-tip .tool-tip-content { padding:5px; }
-<< */
 
-/* Overlay */
+// Overlay
 .overlay {
     z-index: 10000;
     display: none;
@@ -382,36 +390,39 @@ a {
     padding: @spacing;
     background: #f6f6f6;
     border: 1px solid @lineColor;
-}
-.overlay a {
-    color: @linkColor;
-    &:hover,
-    &focus {
-        color: @linkColorHover;
+
+    a {
+        color: @linkColor;
+        &:hover,
+        &:focus {
+            color: @linkColorHover;
+        }
+    }
+    .close {
+        display: none;
+        /*
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        height: 11px;
+        width: 11px;
+        display: block;
+        background: url('../../images/btn_remove.gif') no-repeat 0 0;
+        */
     }
 }
-.overlay .close {
-    display: none;
-    /*
-    position: absolute;
-    right: 0;
-    top: 0;
-    cursor: pointer;
-    height: 11px;
-    width: 11px;
-    display: block;
-    background: url('../../images/btn_remove.gif') no-repeat 0 0;
-    */
-}
 
-/* Mini Login Overlay Custom Styles */
+// Mini Login Overlay Styles
 .mini-login-overlay {
-}
-.mini-login-overlay > p {
-    .heading2();
+    p {
+        .heading2();
+    }
 }
 
-/* Captcha */
+// Captcha
+.captcha {
+}
 .captcha-note {
 }
 .captcha-image {
@@ -419,7 +430,7 @@ a {
     position: relative;
 }
 .captcha-img {
-    border: 1px solid #ccc;
+    border: 1px solid @lineColor;
 }
 .captcha-reload {
     position: absolute;

@@ -10,30 +10,69 @@
    @spacing: @baseSpacing;
 /* ========================================================================== */
 
-/* Shopping cart total summary row expandable to details */
-tr.summary-total { cursor:pointer; }
-tr.summary-total td {}
-tr.summary-total .summary-collapse { float:right; text-align:right; padding-left:20px; background:url('../../images/bkg_collapse.gif') 0 4px no-repeat; cursor:pointer; }
-tr.show-details .summary-collapse { background-position:0 -53px; }
-tr.show-details td {}
-tr.summary-details td { font-size:11px; background-color:#dae1e4; color:#626465; }
-tr.summary-details-first td { border-top:1px solid #d2d8db; }
-tr.summary-details-excluded { font-style:italic; }
+// Shopping cart total summary row expandable to details
+tr.summary-total {
+    cursor: pointer;
 
-/* Shopping cart tax info */
-.cart-tax-info { display:block; }
-.cart-tax-info,
-.cart-tax-info .cart-price { padding-right:20px; }
-.cart-tax-total { display:block; padding-right:20px; background:url('../../images/bkg_collapse.gif') 100% 4px no-repeat; cursor:pointer; }
-.cart-tax-info .price,
-.cart-tax-total .price { display:inline !important; font-weight:normal !important; }
-.cart-tax-total-expanded { background-position:100% -53px; }
-
-/* Gift Messages */
-.gift-messages {
+    td {
+    }
+    .summary-collapse {
+        float: right;
+        text-align: right;
+        padding-left: 20px;
+        background: url('../../images/bkg_collapse.gif') no-repeat 0 4px;
+        cursor: pointer;
+    }
 }
-.gift-messages h3 {
-    .heading3();
+tr.show-details {
+    .summary-collapse {
+        background-position: 0 -53px;
+    }
+    td {
+    }
+}
+tr.summary-details {
+    td {
+        font-size: 11px;
+        background-color: #dae1e4;
+        color: #626465;
+    }
+    &-first td {
+        border-top: 1px solid #d2d8db;
+    }
+    &-excluded {
+        font-style: italic;
+    }
+}
+
+// Shopping cart tax info
+.cart-tax-info {
+    display: block;
+}
+.cart-tax-info,
+.cart-tax-info .cart-price {
+    padding-right: 20px;
+}
+.cart-tax-total {
+    display: block;
+    padding-right: 20px;
+    background: url('../../images/bkg_collapse.gif') no-repeat 100% 4px;
+    cursor: pointer;
+}
+.cart-tax-info .price,
+.cart-tax-total .price {
+    display: inline !important;
+    font-weight: @fontWeightNormal !important;
+}
+.cart-tax-total-expanded {
+    background-position: 100% -53px;
+}
+
+// Gift Messages
+.gift-messages {
+    h3 {
+        .heading3();
+    }
 }
 .gift-messages-form {
     position: relative;
@@ -41,147 +80,181 @@ tr.summary-details-excluded { font-style:italic; }
     padding: @spacing/2;
     background-color: #f5f5f5;
     border: 1px solid #ddd;
-}
-.gift-messages-form label {
-}
-.gift-messages-form h4 {
-    .heading3();
-}
-.gift-messages-form h4 + p {
-    margin: 0 0 @spacing/2;
-}
-.gift-messages-form .whole-order {
-}
-.gift-messages-form .item {
-    margin: 10px 0;
-}
-.gift-messages-form .item .product-img-box {
-    float: left;
-    width: 75px;
-}
-.gift-messages-form .item .product-image {
-    margin: 0 0 5px;
-}
-.gift-messages-form .item .number {
-    font-weight:600;
-    text-align: center;
-}
-.gift-messages-form .item .details {
-    margin-left: 90px;
-}
-.gift-messages-form .item .details .product-name {
-    font-weight: 600px;
-}
-.gift-messages-form .form-list .field {
-    margin: 5px 0;
-}
-.gift-messages-form .form-list li.wide textarea {
-    width: 80%;
+
+    label {
+    }
+    h4 {
+        .heading3();
+    }
+    h4 + p {
+        margin: 0 0 @spacing/2;
+    }
+    .whole-order {
+    }
+    .item {
+        margin: 10px 0;
+        .product-img-box {
+            float: left;
+            width: 75px;
+        }
+        .product-image {
+            margin: 0 0 5px;
+        }
+        .number {
+            font-weight:@fontWeightBold;
+            text-align: center;
+        }
+        .details {
+            margin-left: 90px;
+            .product-name {
+                font-weight: @fontWeightBold;
+            }
+        }
+    }
+    .form-list {
+        .field {
+            margin: 5px 0;
+        }
+        li.wide textarea {
+            width: 80%;
+        }
+    }
 }
 #allow-gift-messages-for-order-container .form-list .field {
     float: none;
     margin: 10px 0;
 }
-
-.gift-message-link { display:block; background:url('../../images/bkg_collapse.gif') 0 4px no-repeat; padding-left:20px; }
-.gift-message-link.expanded { background-position:0 -53px; }
-.gift-message-row {}
-.gift-message-row .btn-close { float:right; }
-.gift-message dt strong { font-weight:600; }
-
-/* Checkout Agreements */
-.checkout-agreements {
-}
-.checkout-agreements li {
-    margin: @spacing/2 0;
-}
-.checkout-agreements .agreement-content {
-    overflow: auto;
-    height: 10em;
-    padding: 10px;
-    background-color: #f6f6f6;
-    border: 1px solid #ddd;
-}
-.checkout-agreements .agree {
-    padding: 10px;
-}
-
-/* Centinel */
-.centinel {}
-.centinel .authentication { border:1px solid #ddd; background:#fff; }
-.centinel .authentication iframe { width:99%; height:400px; background:transparent !important; margin:0 !important; padding:0 !important; border:0 !important; }
-
-/* Shipping and Payment methods */
-.sp-methods dt {
-    font-weight: 600;
-    margin: 0 0 @spacing/4;
-}
-.sp-methods dd {
-    font-weight: 600;
-    margin: 0 0 @spacing/2;
-}
-.sp-methods .price {
-    font-weight: 600;
-}
-.sp-methods .form-list {
+.gift-message-link {
+    display: block;
+    background: url('../../images/bkg_collapse.gif') no-repeat 0 4px;
     padding-left: 20px;
+    &.expanded {
+        background-position: 0 -53px;
+    }
 }
-.sp-methods select.month {
-    width: 150px;
-    margin-right: 10px;
+.gift-message-row {
+    .btn-close {
+        float: right;
+    }
 }
-.sp-methods select.year {
-    width: 96px;
-}
-.sp-methods input.cvv {
-    width: 3em !important;
-}
-
-.sp-methods .checkmo-list li {
-    margin: 0 0 5px;
-}
-.sp-methods .checkmo-list label {
-    width: 135px;
-    padding-right: 10px;
-    text-align: right;
-}
-.sp-methods .checkmo-list address {
-    float: left;
+.gift-message {
+    dt strong {
+        font-weight: @fontWeightBold;
+    }
 }
 
-.sp-methods .centinel-logos a {
-    margin-right: 3px;
-}
-.sp-methods .centinel-logos img {
-    vertical-align: middle;
+// Checkout Agreements
+.checkout-agreements {
+    li {
+        margin: @spacing/2 0;
+    }
+    .agreement-content {
+        overflow: auto;
+        height: 10em;
+        padding: 10px;
+        background-color: #f6f6f6;
+        border: 1px solid #ddd;
+    }
+    .agree {
+        padding: 10px;
+    }
 }
 
-.sp-methods .release-amounts {
-    margin: 0.5em 0 1em;
-}
-.sp-methods .release-amounts button {
-    float: left;
-    margin: 5px 10px 0 0;
+// Centinel
+.centinel {
+    .authentication {
+        border: 1px solid #ddd;
+        background: #fff;
+
+        iframe {
+            width: 99%;
+            height: 400px;
+            background: transparent !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+        }
+    }
 }
 
-.cards-list dt {
-    margin: 5px 0 0;
+// Shipping and Payment methods
+.sp-methods {
+    dt {
+        font-weight: @fontWeightBold;
+        margin: 0 0 @spacing/4;
+    }
+    dd {
+        font-weight: @fontWeightBold;
+        margin: 0 0 @spacing/2;
+    }
+    .price {
+        font-weight: @fontWeightBold;
+    }
+    .form-list {
+        padding-left: 20px;
+    }
+    select.month {
+        width: 150px;
+        margin-right: 10px;
+    }
+    select.year {
+        width: 96px;
+    }
+    input.cvv {
+        width: 3em !important;
+    }
+    .checkmo-list {
+        li {
+            margin: 0 0 5px;
+        }
+        label {
+            width: 135px;
+            padding-right: 10px;
+            text-align: right;
+        }
+        address {
+            float: left;
+        }
+    }
+    .centinel-logos {
+        a {
+            margin-right: 3px;
+        }
+        img {
+            vertical-align: middle;
+        }
+    }
+    .release-amounts {
+        margin: 0.5em 0 1em;
+        button {
+            float: left;
+            margin: 5px 10px 0 0;
+        }
+    }
 }
-.cards-list .offset {
-    padding: 2px 0 2px 20px;
+
+.cards-list {
+    dt {
+        margin: 5px 0 0;
+    }
+    .offset {
+        padding: 2px 0 2px 20px;
+    }
 }
 
 .please-wait {
     float: right;
     margin-right: 5px;
+    img {
+        vertical-align: middle;
+    }
 }
-.please-wait img {
-    vertical-align: middle;
-}
+
 .cvv-what-is-this {
     margin-left: 5px;
     line-height: 25px;
 }
+
 .payment-tooltip {
     width: auto;
 }

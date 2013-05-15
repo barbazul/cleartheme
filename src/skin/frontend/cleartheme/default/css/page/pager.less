@@ -10,87 +10,49 @@
    @spacing: @baseSpacing;
 /* ========================================================================== */
 
-.my-account .pager,
-.box-reviews .pager,
-.page-sitemap .pager {
-    text-align: center;
-    line-height: 30px;
-    margin: @spacing/4 0;
-    border-top: 1px solid @lineColor;
-    border-bottom: 1px solid @lineColor;
-}
+.my-account,
+.box-reviews,
+.page-sitemap {
+    .pager {
+        text-align: center;
+        line-height: 30px;
+        margin: @spacing/4 0;
+        border-top: 1px solid @lineColor;
+        border-bottom: 1px solid @lineColor;
 
-.my-account .pager .limiter,
-.box-reviews .pager .limiter,
-.page-sitemap .pager .limiter {
-}
-
-.my-account .pager .pages,
-.box-reviews .pager .pages,
-.page-sitemap .pager .pages {
-}
-
-.my-account .pager .pages ol,
-.box-reviews .pager .pages ol,
-.page-sitemap .pager .pages ol {
-    display: inline;
-}
-
-.my-account .pager select,
-.box-reviews .pager select,
-.page-sitemap .pager select {
-    padding: 1px;
-}
-
-.my-account .pager .amount,
-.box-reviews .pager .amount,
-.page-sitemap .pager .amount {
-    float: left; 
-}
-
-.my-account .pager .amount strong,
-.box-reviews .pager .amount strong,
-.page-sitemap .pager .amount strong {
-
-}
-
-.my-account .pager .limiter,
-.box-reviews .pager .limiter,
-.page-sitemap .pager .limiter {
-    float: right;
-}
-
-.my-account .pager ol,
-.box-reviews .pager ol,
-.page-sitemap .pager ol {
-    display: inline; 
-    margin: 0 2px;
-}
-
-.my-account .pager li,
-.box-reviews .pager li,
-.page-sitemap .pager li {
-    display: inline; 
-    margin: 0 2px;
-}
-
-.my-account .pager .pages .current,
-.box-reviews .pager .pages .current,
-.page-sitemap .pager .pages .current {
-
-}
-
-.my-account .pager .next:hover,
-.my-account .pager .next:focus,
-.my-account .pager .previous:hover,
-.my-account .pager .previous:focus,
-.box-reviews .pager .next:hover,
-.box-reviews .pager .next:focus,
-.box-reviews .pager .previous:hover,
-.box-reviews .pager .previous:focus,
-.page-sitemap .pager .next:hover,
-.page-sitemap .pager .next:focus,
-.page-sitemap .pager .previous:hover,
-.page-sitemap .pager .previous:focus {
-    opacity: 0.6;
+        select {
+            padding: 1px;
+        }
+        .amount {
+            float: left;
+            strong {
+            }
+        }
+        .limiter {
+            float: right;
+        }
+        ol {
+            display: inline; 
+            margin: 0 2px;
+        }
+        li {
+            display: inline; 
+            margin: 0 2px;
+        }
+        .next:hover,
+        .next:focus,
+        .previous:hover,
+        .previous:focus {
+            opacity: 0.6;
+        }
+    }
+    .limiter {
+    }
+    .pages {
+        ol {
+            display: inline;
+        }
+    }
+    .current {
+    }
 }

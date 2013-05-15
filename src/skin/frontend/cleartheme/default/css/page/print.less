@@ -10,40 +10,43 @@
    @spacing: (@baseSpacing/2);
 /* ========================================================================== */
 
-.page-print .print-head {
-    margin: 0 0 @spacing;
-}
-.page-print h1 {
-    .heading1();
-}
-.page-print .order-date {
-    text-align: right;
-    margin-top: -@baseFontSize;
-}
-.page-print h2:not(.h2),
-.page-print .col2-set h3,
-.page-print .col2-set + h3 {
-    .heading2();
-}
-.page-print h2.h2 {
-    .heading1();
-}
-.page-print .col2-set {
-    margin: @spacing 0;
-}
-.page-print p,
-.page-print address {
-    line-height: @baseLineHeight;
-}
-.page-print .buttons-set {
-    position: absolute;
-    top: 40px;
-    right: 20px;
-    margin: 0;
-    padding: 0;
-    background: 0;
-    border: 0;
-}
-.page-print .buttons-set .button {
-    .btn-general();
+.page-print {
+    .print-head {
+        margin: 0 0 @spacing;
+    }
+    h1 {
+        .heading1();
+    }
+    .order-date {
+        text-align: right;
+        margin-top: (@baseFontSize)*(-1);
+    }
+    h2:not(.h2),
+    .col2-set h3,
+    .col2-set + h3 {
+        .heading2();
+    }
+    h2.h2 {
+        .heading1();
+    }
+    .col2-set {
+        margin: @spacing 0;
+    }
+    p,
+    address {
+        line-height: @baseLineHeight;
+    }
+    .buttons-set {
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        margin: 0;
+        padding: 0;
+        background: 0;
+        border: 0;
+
+        .button {
+            .btn-general();
+        }
+    }
 }

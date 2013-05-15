@@ -8,14 +8,14 @@
 /* Button =================================================================== */
 
 .btn-general (@background: #ec1c25) {
-    font-size: 14px; 
-    .serif();
+    font-size: (@baseFontSize)+2; 
+    font-family: @serifFontFamily;
 
     span {
     }
     span span {
         color: #fff;
-        font-weight: 600;
+        font-weight: @fontWeightBold;
         padding: 4px 9px;
         background: @background;
         .transition();
@@ -36,12 +36,11 @@
     }
 }
 
-
 .btn-simple (@background: #4082BC) {
     color: #fff;
-    font-size: 12px; 
-    .serif();
-    font-weight: 600;
+    font-size: @baseFontSize; 
+    font-family: @serifFontFamily;
+    font-weight: @fontWeightBold;
     padding: 2px 4px;
     background: @background;
     .transition();

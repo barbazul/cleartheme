@@ -8,106 +8,108 @@
 /* Nav ====================================================================== */
    @import '../less/global.less';
    @spacing: @baseSpacing;
+   @subNavWidth: 120px;
 /* ========================================================================== */
 
 .nav-container {
-    line-height: @baseLineHeight;
-    margin: @spacing/8 0;
-    background: #fff;
+    background: @baseBackground;
 }
+
+// All Levels
 #nav {
     width: @pageWidth;
     margin: 0 auto;
     padding: @spacing/4 0;
-}
 
-/* All Levels */
-#nav li {
-    position: relative;
-}
-#nav li.over {
-    z-index: 998;
-}
-#nav li.parent {
-}
-#nav li a {
-    display: block;
-    &:hover{
+    li {
+        position: relative;
 
+        &.over {
+            z-index: 998;
+        }
+        &.parent {
+        }
+        a {
+            display: block;
+            &:hover {
+            }
+            span {
+                display: block;
+                white-space: nowrap;
+                cursor: pointer;
+            }
+        }
+        ul a span {
+            white-space: normal;
+        }
     }
-    span {
-        display: block;
-        white-space: nowrap;
-        cursor: pointer;
-    }
-}
-#nav li ul a span {
-    white-space: normal;
 }
 
-/* 1st Level */
+// 1st Level
 #nav > li {
     float: left;
-}
-#nav li a {
-    float: left;
-    line-height: 25px;
-    padding: 0 @spacing/4;
-    font-weight: 600;
-    color: @linkColor;
-}
-#nav li.over a {
-    color: #fff !important;
-    background: #000;
-}
-#nav li.active a {
-    color: #333;
+    a {
+        float: left;
+        line-height: 25px;
+        padding: 0 @spacing/4;
+        font-weight: @fontWeightBold;
+        color: @linkColor;
+    }
+    &.over a {
+        color: #fff !important;
+        background: #000;
+    }
+    &.active a {
+        color: #333;
+    }
 }
 
-/* 2nd Level */
+// 2nd Level
 #nav ul {
     position: absolute;
-    width: 180px;
+    width: @subNavWidth;
     top: 25px;
     left: 0;
     opacity: 0;
     visibility: hidden;
     background: #000;
+
+    li {
+        float: none;
+        border-top: 1px solid #fff;
+
+        &.last {
+        }
+        a {
+            float: none;
+            font-weight: @fontWeightNormal;
+            line-height: @baseLineHeight;
+            padding: 2px 5px;
+            color: #fff !important;
+        }
+        &.over > a {
+            color: #fff !important;
+            background: @linkColorHover;
+        }
+        &.active > a {
+            color: #fff !important;
+        }
+    }
 }
 
-/* 3rd+ leven */
+// 3rd+ leven
 #nav ul ul {
     top: 7px;
-    left: 120px;
-}
-#nav ul li {
-    float: none;
-    border-top: 1px solid #fff;
-}
-#nav ul li.last {
-}
-#nav ul li a {
-    float: none;
-    font-weight: 400;
-    line-height: @baseLineHeight;
-    padding: @spacing/8 @spacing/4;
-    color: #fff !important;
-}
-#nav ul li.over > a {
-    color: #fff !important;
-    background: @linkColorHover;
-}
-#nav ul li.active > a {
-    color: #fff !important;
+    left: (@subNavWidth)-40;
 }
 
-/* Show menu */
+// Show menu
 #nav li ul.shown-sub {
     opacity: 1;
     visibility: visible;
     z-index: 9999;
-    .transition(150ms);
+    .transition(all, 150ms);
 }
 #nav li .shown-sub ul.shown-sub {
-    left: 140px;
+    left: (@subNavWidth)-20;
 }

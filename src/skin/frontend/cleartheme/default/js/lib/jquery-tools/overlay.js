@@ -175,7 +175,7 @@
                             top += w.scrollTop();
                             left += w.scrollLeft();
                         }
-                        
+
                         if (maskConf) {
                             $.mask.fit();
                         }
@@ -183,7 +183,6 @@
                         $(overlay).css("top", top).css("left", left);
                     });
                 }
-
 
                 // load effect  		 		
                 eff[0].call(self, {top: top, left: left}, function() {
