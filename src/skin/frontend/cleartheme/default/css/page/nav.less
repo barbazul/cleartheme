@@ -19,7 +19,8 @@
 #nav {
     width: @pageWidth;
     margin: 0 auto;
-    padding: @spacing/4 0;
+    padding: (@spacing/4) 0;
+    .clearfix();
 
     li {
         position: relative;
@@ -51,7 +52,7 @@
     a {
         float: left;
         line-height: 25px;
-        padding: 0 @spacing/4;
+        padding: 0 (@spacing/4);
         font-weight: @fontWeightBold;
         color: @linkColor;
     }
@@ -84,7 +85,7 @@
             float: none;
             font-weight: @fontWeightNormal;
             line-height: @baseLineHeight;
-            padding: 2px 5px;
+            padding: 3px (@spacing/4);
             color: #fff !important;
         }
         &.over > a {

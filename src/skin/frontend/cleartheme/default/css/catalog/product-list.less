@@ -13,10 +13,10 @@
 .category-title {
 }
 .category-image {
-
     img {
         display: block;
         margin: 0 auto;
+        max-width: 100%;
     }
 }
 .category-description {
@@ -35,6 +35,7 @@
 .toolbar .pager {
     text-align: center;
     line-height: 30px;
+    .clearfix();
 
     .amount {
         float: left;
@@ -64,6 +65,7 @@
 .toolbar .sorter {
     line-height: 30px;
     border-top: 1px solid @lineColor;
+    .clearfix();
 
     .sort-by {
         float: right;
@@ -131,6 +133,7 @@
 .products-grid {
     position: relative;
     border-bottom: 1px solid @lineColor;
+    .clearfix();
 
     &.last {
         border-bottom: 0;
@@ -138,7 +141,13 @@
     li.item {
         float: left;
         width: 140px;
-        padding: @spacing/2 @spacing/4 100px; // the 100px is the height =)
+        padding: @spacing/2 26px 100px; // the 100px is the height =)
+        &.first {
+            padding-left: 0;
+        }
+        &.last {
+            padding-right: 0;
+        }
     }
     .product-image {
         display: block;
@@ -178,6 +187,7 @@
     li.item {
         padding: @spacing 0;
         border-bottom: 1px solid @lineColor;
+        .clearfix();
         &.last {
             border-bottom: 0;
         }
@@ -192,6 +202,7 @@
     }
     .product-shop {
         margin-left: round((@spacing/2)+135); // 135 because product-image width
+        .clearfix();
     }
     .product-name {
         margin: 0 0 @spacing/4;

@@ -21,7 +21,6 @@
             <action method="addCss"><stylesheet>css/page/header.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/nav.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/footer.less</stylesheet></action>
-            <action method="addCss"><stylesheet>css/page/clears.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/local.less</stylesheet></action>
             
             <!-- JavaScript -->
@@ -102,7 +101,6 @@
             <action method="addCss"><stylesheet>css/page/header.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/nav.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/footer.less</stylesheet></action>
-            <action method="addCss"><stylesheet>css/page/clears.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/local.less</stylesheet></action>
             
             <!-- JavaScript -->
@@ -213,6 +211,9 @@
         <reference name="product_list_toolbar">
             <action method="setDefaultDirection"><string>asc</string></action>
         </reference>
+        <reference name="product_list">
+            <action method="setColumnCount"><columns>4</columns></action>
+        </reference>
     </catalog_category_default>
     
     <catalog_category_layered>
@@ -228,6 +229,9 @@
         </reference>
         <reference name="product_list_toolbar">
             <action method="setDefaultDirection"><string>asc</string></action>
+        </reference>
+        <reference name="product_list">
+            <action method="setColumnCount"><columns>4</columns></action>
         </reference>
     </catalog_category_layered>
     
@@ -245,6 +249,9 @@
         <reference name="product_list_toolbar">
             <action method="setDefaultDirection"><string>asc</string></action>
         </reference>
+        <reference name="product_list">
+            <action method="setColumnCount"><columns>4</columns></action>
+        </reference>
     </catalogsearch_result_index>
     
     <catalogsearch_advanced_result>
@@ -260,6 +267,9 @@
         </reference>
         <reference name="product_list_toolbar">
             <action method="setDefaultDirection"><string>asc</string></action>
+        </reference>
+        <reference name="product_list">
+            <action method="setColumnCount"><columns>4</columns></action>
         </reference>
     </catalogsearch_advanced_result>
     
@@ -298,6 +308,9 @@
         </reference>
         <reference name="product_list_toolbar">
             <action method="setDefaultDirection"><string>asc</string></action>
+        </reference>
+        <reference name="product_list">
+            <action method="setColumnCount"><columns>4</columns></action>
         </reference>
     </tag_product_list>
        

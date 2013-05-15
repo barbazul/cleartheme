@@ -98,8 +98,10 @@ button.button::-moz-focus-inner { // FF Fix
 
 // Form lists
 .form-list {
+    .clearfix();
     li {
         margin: 0 0 16px;
+        .clearfix();
     }
     label {
         float: left;
@@ -292,13 +294,14 @@ button.button::-moz-focus-inner { // FF Fix
 }
 
 .fieldset + .fieldset {
-    margin: @spacing 0 0;
+    margin: (@spacing/2) 0 0;
 }
 .buttons-set {
     clear: both;
     margin: @spacing 0 0;
     padding: @buttonsSetSpacing 0 0;
     border-top: 1px solid @lineColor;
+    .clearfix();
 
     .back-link,
     .forgot-password-link {

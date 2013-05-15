@@ -66,6 +66,7 @@ a {
     width: @pageWidth;
     margin: 0 auto;
     padding: @spacing/2 0;
+    .clearfix();
 }
 
 // Base Columns
@@ -103,7 +104,7 @@ a {
     .col-wrapper {
         float: left;
         width: 720px;
-
+        .clearfix();
         .col-main {
             float: right;
         }
@@ -112,6 +113,7 @@ a {
 
 // Content Columns
 .col2-set {
+    .clearfix();
     .col-1 {
         float: left;
         width: 49%;
@@ -128,6 +130,7 @@ a {
     }
 }
 .col3-set {
+    .clearfix();
     .col-1 {
         float: left;
         width: 32%;
@@ -143,6 +146,7 @@ a {
     }
 }
 .col4-set {
+    .clearfix();
     .col-1 {
         float: left;
         width: 23.5%;
@@ -244,6 +248,7 @@ a {
 }
 .title-buttons {
     text-align: right;
+    .clearfix();
     h1,
     h2,
     h3,
