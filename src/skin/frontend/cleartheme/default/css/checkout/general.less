@@ -91,9 +91,11 @@ tr.summary-details {
     }
     .whole-order {
     }
+    ol {
+        .unstyle-list();
+    }
     .item {
         margin: 10px 0;
-        .clearfix();
         .product-img-box {
             float: left;
             width: 75px;
@@ -107,8 +109,11 @@ tr.summary-details {
         }
         .details {
             margin-left: 90px;
+            .clearfix();
             .product-name {
+                font-size: @baseFontSize;
                 font-weight: @fontWeightBold;
+                margin: 0;
             }
         }
     }
@@ -146,6 +151,7 @@ tr.summary-details {
 
 // Checkout Agreements
 .checkout-agreements {
+    .unstyle-list();
     li {
         margin: @spacing/2 0;
     }
@@ -157,6 +163,7 @@ tr.summary-details {
         border: 1px solid #ddd;
     }
     .agree {
+        margin: 0;
         padding: 10px;
     }
 }
@@ -187,6 +194,9 @@ tr.summary-details {
     dd {
         font-weight: @fontWeightBold;
         margin: 0 0 @spacing/2;
+    }
+    ul {
+        .unstyle-list();
     }
     .price {
         font-weight: @fontWeightBold;

@@ -10,7 +10,11 @@
    @spacing: @baseSpacing;
 /* ========================================================================== */
 
-.tags-list li {
-    margin: 0 20px 0 0;
-    line-height: @baseLineHeight*1.2;
+.tags-list {
+    .unstyle-list();
+    li {
+        display: inline;
+        margin: 0 20px 0 0;
+        line-height: @baseLineHeight*1.2;
+    }
 }

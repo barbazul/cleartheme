@@ -20,6 +20,7 @@
     width: @pageWidth;
     margin: 0 auto;
     padding: (@spacing/4) 0;
+    list-style: none;
     .clearfix();
 
     li {
@@ -40,8 +41,11 @@
                 cursor: pointer;
             }
         }
-        ul a span {
-            white-space: normal;
+        ul {
+            .unstyle-list();
+            a span {
+                white-space: normal;
+            }
         }
     }
 }

@@ -15,7 +15,7 @@
             <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
             <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
 
-            <action method="addCss"><stylesheet>css/page/reset.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/normalize.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/page.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/form.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/header.less</stylesheet></action>
@@ -72,6 +72,7 @@
         <reference name="left">
             <remove name="left.permanent.callout" />
             <remove name="left.newsletter" />
+            <remove name="cart_sidebar" />
         </reference>
         
         <reference name="right">
@@ -95,7 +96,7 @@
             <action method="removeItem"><type>skin_css</type><name>css/widgets.css</name></action>
             <action method="removeItem"><type>skin_css</type><name>css/print.css</name></action>
             
-            <action method="addCss"><stylesheet>css/page/reset.less</stylesheet></action>
+            <action method="addCss"><stylesheet>css/page/normalize.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/page.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/form.less</stylesheet></action>
             <action method="addCss"><stylesheet>css/page/header.less</stylesheet></action>
@@ -249,7 +250,7 @@
         <reference name="product_list_toolbar">
             <action method="setDefaultDirection"><string>asc</string></action>
         </reference>
-        <reference name="product_list">
+        <reference name="search_result_list">
             <action method="setColumnCount"><columns>4</columns></action>
         </reference>
     </catalogsearch_result_index>

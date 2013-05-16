@@ -28,6 +28,9 @@
 
 // Block Account
 .block-account {
+    ul {
+        .unstyle-list();
+    }
     li {
         margin: 0 0 @spacing/4;
         &.last {
@@ -55,6 +58,9 @@
 .addresses-list .item {
     margin: 0 0 @spacing;
     .clearfix();
+    p {
+        margin: 0;
+    }
 }
 .box-head,
 .box-title {
@@ -181,6 +187,9 @@
 
 // Address Book
 .addresses-list {
+    ol {
+        .unstyle-list();
+    }
 }
 .addresses-additional .separator {
     visibility: hidden;
@@ -354,6 +363,7 @@
 .tags-list {
     font-size: round(@baseFontSize*1.3);
     line-height: @baseLineHeight;
+    .unstyle-list();
     li {
         display: inline;
     }
@@ -396,6 +406,9 @@
         }
         .cart-cell {
             text-align: center;
+            p {
+                margin: 0;
+            }
         }
         .price-box {
             margin: 0 0 10px;

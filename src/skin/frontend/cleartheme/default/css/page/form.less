@@ -26,7 +26,7 @@ textarea {
     background: #fff;
     border: 1px solid lighten(@baseFontColor, 50%);
     &:focus {
-        border-color: #ec1c25;
+        border-color: @formFocusColor;
     }
 }
 input.input-text,
@@ -99,6 +99,10 @@ button.button::-moz-focus-inner { // FF Fix
 // Form lists
 .form-list {
     .clearfix();
+    .unstyle-list();
+    ul {
+        .unstyle-list();
+    }
     li {
         margin: 0 0 16px;
         .clearfix();
@@ -127,9 +131,7 @@ button.button::-moz-focus-inner { // FF Fix
         }
         input.radio,
         input.checkbox {
-            position: relative;
-            top: 2px;
-            margin: 1px 6px 1px 1px;
+            margin: 0 6px 0 0;
         }
         .input-box {
             clear: none;

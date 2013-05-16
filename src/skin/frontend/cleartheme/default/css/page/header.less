@@ -30,6 +30,7 @@
 
 .logo {
     float: left;
+    margin: 0;
     strong {
         position: absolute;
         top: -9999px;
@@ -40,6 +41,9 @@
         line-height: 0;
         text-indent: -9999px;
         overflow: hidden;
+    }
+    img {
+        display: block;
     }
 }
 
@@ -57,6 +61,8 @@
 }
 .customer-account-links {
     float: left;
+    .unstyle-list();
+
     li {
         float: left;
         margin: 0 10px 0 0;
@@ -67,6 +73,14 @@
 .customer-cart {
     float: right;
     padding: 0 0 10px;
+    em {
+        font-style: normal;
+    }
+}
+.customer-cart-noitems {
+    strong {
+        font-weight: @fontWeightNormal;
+    }
 }
 .customer-cart-items {
     display: none;
@@ -80,14 +94,21 @@
     .summary {
         line-height: @baseLineHeight;
     }
+    .amount {
+        margin: 0;
+    }
     .subtotal {
         font-weight: @fontWeightBold;
+        margin: 0;
     }
     .button {
         .btn-general();
     }
     .actions + p {
         margin: @spacing/2 0 0;
+    }
+    ol {
+        .unstyle-list();
     }
     li {
         line-height: @baseLineHeight;
@@ -151,9 +172,10 @@
         margin: -1px 0 0;
 
         ul {
-            background: #fff;
-            border: 1px solid #ec1c25;
+            .unstyle-list();
+            border: 1px solid @formFocusColor;
             border-top: 0;
+            background: #fff;
         }
         li {
             cursor: pointer;

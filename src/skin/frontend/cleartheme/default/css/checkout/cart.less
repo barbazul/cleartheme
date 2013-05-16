@@ -17,6 +17,7 @@
     .checkout-types {
         float: right;
         text-align: right;
+        .unstyle-list();
     }
     .button {
         .btn-general();
@@ -26,6 +27,7 @@
 // Shopping Cart Table
 .cart-table {
     .product-name {
+        font-size: @baseFontSize;
         margin: 0 0 @spacing/8;
     }
     tfoot .a-right {
@@ -74,12 +76,12 @@
     tbody td {
         font-size: @baseFontSize;
     }
-    tfoot td {
-        font-weight: @fontWeightBold;
+    tfoot strong {
         font-size: @baseFontSize+5;
     }
     .checkout-types {
         text-align: right;
+        .unstyle-list();
         li {
             margin: @spacing/4 0;
         }
@@ -94,6 +96,9 @@
     h2 {
         font-size: @baseFontSize+2;
         font-weight: @fontWeightBold;
+    }
+    ul {
+        .unstyle-list();
     }
     .product-image {
         float: left;

@@ -20,16 +20,11 @@
 .f-none       { float:none !important; }
 .f-fix        { float:left; width:100%; }
 .no-display   { display:none; }
+.clearer {
+    .clearfix();
+}
 
 // General
-html {
-    background: @baseBackground;
-}
-body {
-    color: @baseFontColor;
-    font-size: @baseFontSize;
-    font-family: @serifFontFamily;
-}
 a {
     cursor: pointer;
     outline: 0;
@@ -179,9 +174,13 @@ a {
     color: #ccc;
 }
 .messages {
-    width: 100%; 
+    width: 100%;
+    .unstyle-list();
     .clearfix();
-
+    
+    ul {
+        .unstyle-list();
+    }
     li {
         margin: 0 0 20px;
         li {
@@ -220,7 +219,9 @@ a {
 // Breadcrumbs
 .breadcrumbs {
     margin: 0 0 15px;
-
+    ul {
+        .unstyle-list();
+    }
     li {
         display: inline;
     }

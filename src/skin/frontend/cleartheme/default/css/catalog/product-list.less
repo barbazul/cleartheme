@@ -39,6 +39,7 @@
 
     .amount {
         float: left;
+        margin: 0;
     }
     .limiter {
         float: right;
@@ -46,6 +47,7 @@
     .pages {
         ol {
             display: inline;
+            .unstyle-list();
         }
         li {
             display: inline;
@@ -83,6 +85,7 @@
     float: left;
     width: 38px;
     height: 13px;
+    margin: 0;
 
     label {
         display: none;
@@ -119,20 +122,24 @@
     }
 }
 
-// Generic styles: applies for GRID and LIST
-.category-products .product-name a {
-
-    &:hover,
-    &:focus {
+.category-products {
+    // Generic styles: applies for GRID and LIST
+    .product-name a {
+        &:hover,
+        &:focus {
+        }
+    }
+    .availability {
+    }
+    .add-to-links {
+        .unstyle-list();
     }
 }
-.category-products .availability {
-}
-
 // View Type: Grid
 .products-grid {
     position: relative;
     border-bottom: 1px solid @lineColor;
+    .unstyle-list();
     .clearfix();
 
     &.last {
@@ -159,6 +166,7 @@
         }
     }
     .product-name {
+        font-size: @baseFontSize;
         margin: 0 0 @spacing/4;
     }
     .price-box {
@@ -184,6 +192,7 @@
 
 // View Type: List
 .products-list {
+    .unstyle-list();
     li.item {
         padding: @spacing 0;
         border-bottom: 1px solid @lineColor;
@@ -205,6 +214,7 @@
         .clearfix();
     }
     .product-name {
+        font-size: @baseFontSize;
         margin: 0 0 @spacing/4;
     }
     .price-box {
@@ -248,8 +258,18 @@
     }
     dd {
         margin: 0 0 @spacing;
+        a {
+            color: @linkColor;
+            &:hover,
+            &:focus {
+                color: @linkColorHover;
+            }
+        }
     }
-    dd li {
+    ol {
+        .unstyle-list();
+    }
+    li {
         margin: @spacing/4 0;
     }
     dd.last,

@@ -11,9 +11,9 @@
 @pageWidth: 960px;
 @color1: #ea1b1b; // primary color
 @color2: #00c300; // secondary color
-@color3: #ffa500; // tertiary color
+@color3: #ec1c25; // tertiary color
 @lineColor: #4082BC;
-@linkColor: #ec1c25;
+@linkColor: @color3;
 @linkColorHover: darken(@linkColor, 20%);
 @baseBackground: #f1f1f1;
 @baseSpacing: 40px;
@@ -38,6 +38,7 @@
     font-size: (@baseFontSize)+10;
     font-weight: @fontWeightNormal;
     font-family: @sansFontFamily;
+    margin: 0;
 }
 .heading2 () {
     clear: both;
@@ -62,7 +63,7 @@
 @tableLineColor: @lineColor;
 
 // Forms
-@formFocusColor: @color2;
+@formFocusColor: @color3;
 @buttonsSetSpacing: 10px;
 
 /* ========================================================================== */
