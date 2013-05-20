@@ -12,8 +12,12 @@
         skin_url: null,
         logged_in: null, 
         
-        getSkinUrl: function () {
-            return this.skin_url;
+        getSkinUrl: function (path) {
+            if (typeof path === "undefined") {
+                return this.skin_url;
+            } else {
+                return this.skin_url+path;
+            }
         },
         
         isLoggedIn: function () {
