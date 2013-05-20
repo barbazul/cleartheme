@@ -1,16 +1,16 @@
-ClearTheme - Magento Community Edition Starting Theme
+Cleartheme - Magento Community Edition Starting Theme
 ==============================
 
-* Just local.xml updates.
-* Scope definitions in local.xml.
+Cleartheme provides a better starting point for Magento frontend development. **Just add your favorite grid system and start theming!**
+
+* Use of LessCSS.
 * Use of normalize.css.
-* Better css/js organization.
 * Loads css files per module.
 * Loads javascript files per module.
-* Use of LessCSS.
-* Doctype for html5.
 * Cleaned, optimized and improved css code.
-* jQuery loaded by default.
+* Better css/js organization.
+* Doctype for html5.
+* Just local.xml layout updates.
 * Based on Blank theme.
 
 Other features:
@@ -25,6 +25,7 @@ Other features:
 * Facebook Open Graph meta tags for products.
 * window.Frontend object with some useful methods.
 
+
 ------------------------------
 
 Demo: http://cleartheme.com.ar
@@ -35,9 +36,9 @@ Demo: http://cleartheme.com.ar
 Installation & Troubleshooting
 ==============================
 
-To install ClearTheme you must have Magento 1.7+ working. 
-* After that merge ClearTheme files in your Magento directory.
-* Once you merged ClearTheme files, **make sure that all directories under /path/to/magento/skin/frontend/cleartheme/css/ have write permission** (that's because lesscss compiler will generate css files in same directory of .less file).
+To install Cleartheme you must have Magento 1.7+ working. 
+* After that merge Cleartheme files in your Magento directory.
+* Once you merged Cleartheme files, **make sure that all directories under /path/to/magento/skin/frontend/cleartheme/css/ have write permission** (that's because lesscss compiler will generate css files in same directory of .less file).
 * Then go to **System -> Configuration -> Design (left tab)** and set **Current Package Name** to **cleartheme**.
 * Finally go to **System -> Configuration -> Less Files (left tab)** and set **Enabled** to **Yes**.
 
@@ -48,7 +49,7 @@ To install ClearTheme you must have Magento 1.7+ working.
 *Then make sure to setup your_theme_name in Current Package Name under System -> Configuration -> Design (left tab).*
 
 ## Dependencies
-ClearTheme needs a lesscss php compiler to work. I chose this one: (Soczed_Less) http://www.magentocommerce.com/magento-connect/lesscss-5369.html and it's allready included in the repo (may be it shouldn't but I don't care right now). If you want to use another lessphp implementation I think it should work anyway.
+Cleartheme needs a lesscss php compiler to work. I chose this one: (Soczed_Less) http://www.magentocommerce.com/magento-connect/lesscss-5369.html and it's allready included in the repo (may be it shouldn't but I don't care right now). If you want to use another lessphp implementation I think it should work anyway.
 Please check Soczed_Less module options going to:
 * System -> Less Files
 * System -> Configuration -> Less Files (left tab)

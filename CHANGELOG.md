@@ -1,6 +1,14 @@
 ChangeLog
 ==============================
 
+## 20/03/2013
+
+    Lesscss variables bugfixes.
+    Added some variables for forms.
+    Removed unused images.
+    Improved javascript getSkinUrl() method.
+
+
 ## 16/03/2013
 
     Removed Meyer reset to use Normalize.css
